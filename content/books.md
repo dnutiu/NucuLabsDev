@@ -10,7 +10,7 @@ I want to highlight some of the books that helped me learn lots of new stuff and
 
 - - - - - -
 
-### Some of my favorites**
+### Some of my favorites
 
 - [Site Reliability Engineering](https://landing.google.com/sre/books/)
 - [The Go Programming Language](https://www.goodreads.com/book/show/25080953-the-go-programming-language)[](https://www.goodreads.com/author/show/15939304.Alan_A_A_Donovan)
