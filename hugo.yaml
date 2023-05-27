@@ -69,8 +69,8 @@ params:
 
   # home-info mode
   homeInfoParams:
-    Title: "Hi there \U0001F44B"
-    Content: Welcome to my blog
+    Title: "Welcome to NucuLabs \U0001F44B"
+    Content: A blog about Programming, Cloud and Engineering! 👨‍🔬
 
   socialIcons:
     - name: stackoverflow
