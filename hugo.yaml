@@ -37,7 +37,7 @@ params:
   comments: true
   hidemeta: false
   hideSummary: false
-  showtoc: true
+  showtoc: false
   tocopen: true
 
   assets:
@@ -128,10 +128,14 @@ menu:
       name: Tags
       url: /tags/
       weight: 40
+    - identifier: books
+      name: Books
+      url: /books/
+      weight: 50
     - identifier: newsletter
       name: Newsletter
       url: https://nuculabs.substack.com/
-      weight: 50
+      weight: 60
 # Read: https://github.com/adityatelange/hugo-PaperMod/wiki/FAQs#using-hugos-syntax-highlighter-chroma
 pygmentsUseClasses: true
 markup:
