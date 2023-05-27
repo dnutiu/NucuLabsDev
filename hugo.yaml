@@ -19,7 +19,7 @@ params:
   title: NucuLabs.Dev
   description: "Programming, Cloud and Engineering! 👨‍🔬"
   keywords: [Blog, NucuLabs, Technology, Engineering]
-  author: ["Denis Nutiu", "Paula Rusti", "AI"]
+  author: ["Denis Nutiu"]
   images: ["<link or path of image for opengraph, twitter-cards>"]
   DateFormat: "January 2, 2006"
   defaultTheme: auto
@@ -37,8 +37,8 @@ params:
   comments: true
   hidemeta: false
   hideSummary: false
-  showtoc: false
-  tocopen: false
+  showtoc: true
+  tocopen: true
 
   assets:
     disableFingerprinting: true
@@ -56,17 +56,17 @@ params:
   # profile-mode
   profileMode:
     enabled: false # needs to be explicitly set
-    title: NucuLabs.Dev
-    subtitle: "This is subtitle"
-    imageUrl: "<img location>"
-    imageWidth: 120
-    imageHeight: 120
-    imageTitle: my image
-    buttons:
-      - name: Posts
-        url: posts
-      - name: Tags
-        url: tags
+#    title: NucuLabs.Dev
+#    subtitle: "This is subtitle"
+#    imageUrl: "<img location>"
+#    imageWidth: 120
+#    imageHeight: 120
+#    imageTitle: my image
+#    buttons:
+#      - name: Posts
+#        url: posts
+#      - name: Tags
+#        url: tags
 
   # home-info mode
   homeInfoParams:
@@ -114,24 +114,24 @@ params:
 menu:
   main:
     - identifier: about
-      name: about
+      name: About
       url: /about/
       weight: 10
     - identifier: search
-      name: search
+      name: Search
       url: /search/
       weight: 20
     - identifier: categories
-      name: categories
+      name: Categories
       url: /categories/
       weight: 30
     - identifier: tags
-      name: tags
+      name: Tags
       url: /tags/
       weight: 40
-    - identifier: example
-      name: example.org
-      url: https://example.org
+    - identifier: newsletter
+      name: Newsletter
+      url: https://nuculabs.substack.com/
       weight: 50
 # Read: https://github.com/adityatelange/hugo-PaperMod/wiki/FAQs#using-hugos-syntax-highlighter-chroma
 pygmentsUseClasses: true
