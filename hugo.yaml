@@ -73,14 +73,16 @@ params:
     Content: A blog about Programming, Cloud and Engineering! 👨‍🔬
 
   socialIcons:
+    - name: goodreads
+      url: "https://www.goodreads.com/user/show/83926681-denis-nu-iu"
     - name: stackoverflow
       url: "https://stackoverflow.com/users/4092044/denis-nutiu"
+    - name: youtube
+      url: "https://www.youtube.com/@nuculabs"
     - name: github
       url: "https://github.com/dnutiu"
     - name: linkedin
       url: "https://linkedin.com/in/denisnutiu"
-    - name: youtube
-      url: "https://www.youtube.com/@nuculabs"
 
 #  analytics:
 #    google:
