@@ -36,4 +36,4 @@ Feel free to contact me at:
 - [StackOverflow](https://stackoverflow.com/users/4092044/denis-nutiu)
 - [YouTube](https://www.youtube.com/@nuculabs)
 
-![nuculabs dev banner](/images/banner.webp)
+![nuculabs dev banner](/images/blog-banner.webp)
