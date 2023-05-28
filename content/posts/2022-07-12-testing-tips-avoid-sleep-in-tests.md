@@ -15,6 +15,7 @@ tags:
 - testing
 - testing tips
 title: 'Testing Tips: Avoid sleep in tests'
+weight: 1000
 ---
 Hi 👋,
 
