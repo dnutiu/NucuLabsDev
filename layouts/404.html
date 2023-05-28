@@ -1,0 +1,5 @@
+{{- define "main" }}
+<img style="margin-left: auto; margin-right: auto; height: 50vh" src="{{ (path.Join .Site.Params.assets.not_found_image) | absURL }}">
+<h1 style="text-align: center">The requested page does not exist. 😢</h1>
+<h2 style="text-align: center">Please use the <a style="text-decoration: underline" href="{{ absURL "/search" }}">search</a> functionality.</h2>
+{{- end }}{{/* end main */ -}}

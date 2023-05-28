@@ -2,7 +2,6 @@ baseURL: 'https://blog.nuculabs.dev/'
 languageCode: 'en-us'
 title: 'NucuLabs'
 theme: "PaperMod"
-
 enableRobotsTXT: true
 buildDrafts: false
 buildFuture: false
@@ -42,6 +41,7 @@ params:
 
   assets:
     disableFingerprinting: true
+    not_found_image: "/images/404.png"
     favicon: "/images/favicon.ico"
     favicon16x16: "/images/favicon-16x16.png"
     favicon32x32: "/images/favicon-32x32.png"
