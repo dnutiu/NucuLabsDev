@@ -1,4 +1,4 @@
-baseURL: 'http://nuculabs.dev/'
+baseURL: 'https://blog.nuculabs.dev/'
 languageCode: 'en-us'
 title: 'NucuLabs'
 theme: "PaperMod"
