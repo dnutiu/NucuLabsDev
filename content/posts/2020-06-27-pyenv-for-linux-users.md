@@ -29,13 +29,13 @@ For a typical Debian based distro using the Zsh shell the instructions would be:
 
 
 ```
-```
 git clone https://github.com/pyenv/pyenv.git ~/.pyenv
-```
 
 echo 'export PYENV_ROOT="$HOME/.pyenv"' >> ~/.zshrc 
 echo 'export PATH="$PYENV_ROOT/bin:$PATH"' >> ~/.zshrc
 ```
+
+
 Then, in order for this to take effect, you need to reload the shell with: `source ~/.zshrc`, or just restart your terminal. 😀
 
 
@@ -68,6 +68,8 @@ Available versions:
 3.9-dev
 3.10-dev
 ```
+
+
 Before installing one, we need to download all the python dependencies for our system, if we don’t do that, the Python compilation will most likely fail.
 
 
