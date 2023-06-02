@@ -74,7 +74,6 @@ Running a sample test which utilizes the fixture will output:
 ```
 collected 1 item                                                                                                                                                                       
 
-
 tests\test_my_object.py 1. fixture code.
 2. Initializing MyObjectThatRequiresCleanUp
 3. test code.
@@ -126,10 +125,7 @@ Thanks for reading! 📚
 ```
 import pytest
 
-
 from my_object import MyObjectThatRequiresCleanUp
-
-
 
 
 @pytest.fixture()
@@ -137,8 +133,6 @@ def my_object_fixture():
     print("1. fixture code.")
     yield MyObjectThatRequiresCleanUp()
     print("4. fixture code after yield.")
-
-
 
 
 @pytest.fixture()
@@ -158,11 +152,9 @@ class MyObjectThatRequiresCleanUp:
     def __init__(self):
         print("2. Initializing MyObjectThatRequiresCleanUp")
 
-
     def __enter__(self):
         print("2.1 Entering")
         return self
-
 
     def __exit__(self, exc_type, exc_val, exc_tb):
         print("3.1 Exiting")
@@ -178,8 +170,6 @@ class MyObjectThatRequiresCleanUp:
 
 ```
 from tests import my_object_fixture
-
-
 
 
 def test_my_object(my_object_fixture):

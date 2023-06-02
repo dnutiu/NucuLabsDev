@@ -30,10 +30,10 @@ I used the following packages in my project.
 
 
 ```
- 
- 
- 
- 
+    <ItemGroup>
+        <PackageReference Include="AutoFixture" Version="4.17.0" />
+        <PackageReference Include="AutoFixture.Xunit2" Version="4.17.0" />
+    </ItemGroup>
 ```
 
 

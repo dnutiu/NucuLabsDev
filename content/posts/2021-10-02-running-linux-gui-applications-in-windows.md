@@ -27,8 +27,7 @@ The first step is to download and install the [VcXsrv Windows X Server](https://
 Then, start [VcXsrv](https://sourceforge.net/projects/vcxsrv/) with the following configuration:
 
 
-- 
-![](/wp-content/uploads/2021/09/image-5.png?w=569)
+- ![](/wp-content/uploads/2021/09/image-5.png?w=569)
 - 
 ![](/wp-content/uploads/2021/09/image-6.png?w=573)
 - 

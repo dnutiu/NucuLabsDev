@@ -45,14 +45,11 @@ class MessageTranslator:
         if not printer:
             raise ValueError("Printer cannot be None.")
 
-
         self._translator = translator
         self._printer = printer
 
-
     def translate(self, message):
         return self._translator.translate(message)
-
 
     def print(self, message):
         self._printer.print(message)
@@ -67,7 +64,6 @@ class Application:
     def __init__(self):
         self._input_listener: InputListener = ConsoleInputListener("< ")
 
-
     def start(self):
         print("starting application.")
         message_translator = MessageTranslator(RomanianTranslator(), ConsolePrinter(">"))
@@ -75,7 +71,6 @@ class Application:
             user_in = Message(self._input_listener.get_input())
             if str(user_in) == "exit":
                 exit(0)
-
 
             translated_message = message_translator.translate(user_in)
             message_translator.print(translated_message)

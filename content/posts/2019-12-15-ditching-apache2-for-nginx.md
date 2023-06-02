@@ -51,40 +51,29 @@ The first step I did was to turn off Apache2 and block the web ports via XXX’s
 sudo systemctl stop apache2
 ```
 ```
-
-
 Next, I’ve installed the necessary dependencies:
 
 
-```
 ```bash
 sudo apt update
 sudo apt install nginx
 sudo apt install python-certbot-nginx
 sudo apt install php7.2-cli php7.2-fpm php7.2-mysql php7.2-json php7.2-opcache php7.2-mbstring php7.2-xml php7.2-gd php7.2-curl
 ```
-```
-
 
 ## Configuring Nginx
 
-
 I’ve deleted the default configuration file from Nginx and created the configuration file for my WordPress blog.
 
-
 ```
-```bash
 sudo rm /etc/nginx/sites-available/default /etc/nginx/sites-enabled/default
 sudo touch /etc/nginx/sites-available/wp-blog
 sudo ln -s /etc/nginx/sites-available/wp-blog /etc/nginx/sites-enabled/
 ```
-```
-
 
 Open **/etc/nginx/sites-available/wp-blog** paste the following things:
 
 
-```
 ```
 # Redirect HTTP -> HTTPS
 server {
@@ -130,13 +119,11 @@ server {
     }
 }
 ```
-```
 
 
 Next, create **/etc/nginx/snippets/letsencrypt.conf** and paste:
 
 
-```
 ```
 location ^~ /.well-known/acme-challenge/ {
   allow all;
@@ -145,13 +132,10 @@ location ^~ /.well-known/acme-challenge/ {
   try_files $uri =404;
 }
 ```
-```
-
 
 And finally create **/etc/nginx/snippets/ssl.conf** and paste:
 
 
-```
 ```
 ssl_dhparam /etc/ssl/certs/dhparam.pem;
 ssl_session_timeout 1d;
@@ -168,36 +152,23 @@ add_header Strict-Transport-Security "max-age=15768000; includeSubdomains; prelo
 add_header X-Frame-Options SAMEORIGIN;
 add_header X-Content-Type-Options nosniff;
 ```
-```
-
 
 The last thing we need is to create the **dh-param.pem** file:
 
-
-```
 ```
 sudo openssl dhparam -out /etc/ssl/certs/dhparam.pem 2048
 ```
-```
-
-
 Now, to test that our configuration is valid we run **nginx -t**. You shouldn’t see any errors.
-
 
 Note: *You should replace the **domain.tld** with our own domain. I already had the Let’s Encrypt certificate on the machine, if you don’t have one then you should generate one using certbot.*
 
-
 ## Uninstalling Apache2
-
 
 You should start the website and check if it’s running correctly, then you may uninstall apache2.
 
-
-```
 ```
 sudo apt-get purge apache2
 sudo rm -rf /etc/apache2 
-```
 ```
 
 
@@ -211,8 +182,3 @@ Thanks for reading!
 
 
 ![](https://media.giphy.com/media/EqGGGbjjFltjG/giphy.gif)
-### Resources
-
-
-- 
-- 

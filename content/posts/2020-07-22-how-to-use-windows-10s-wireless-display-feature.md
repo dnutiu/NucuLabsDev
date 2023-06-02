@@ -34,8 +34,7 @@ on **Change advanced sharing settings**
 Then expand the Private tab and use the same settings as I do, only enable File sharing if you need it.
 
 
-![](/wp-content/uploads/2020/07/annotation-2020-07-21-004840.png?w=792)
-Turning on file and printer sharing is optional.
+![](/wp-content/uploads/2020/07/annotation-2020-07-21-004840.png?w=792)Turning on file and printer sharing is optional.
 Now that this is done we want to mark our house’s Wi-Fi network as Private, this way Windows will trust it and network discovery will be enabled.
 
 
@@ -55,8 +54,7 @@ That’s it! 🎉🎉
 Open up search and type **Projection Settings**, you’ll notice a message prompting you to install the **Wireless Display** optional Windows feature, click that link and type “Display” then install it.
 
 
-- 
-![](/wp-content/uploads/2020/07/annotation-2020-07-20-235539-2.png?w=1024)
+- ![](/wp-content/uploads/2020/07/annotation-2020-07-20-235539-2.png?w=1024)
 - 
 ![](/wp-content/uploads/2020/07/annotation-2020-07-20-235569-2.png?w=1024)
 

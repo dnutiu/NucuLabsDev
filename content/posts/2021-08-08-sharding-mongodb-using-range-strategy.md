@@ -119,10 +119,8 @@ To enable sharding on the database and collection, I’m going to insert some du
   }
 }
 
-
 [direct: mongos]> db.my_users.createIndex({"t": 1})
 [direct: mongos]> sh.shardCollection("my_data.my_users", { "t": 1 })
-
 
 sh.addShardToZone("my-mongo-mongodb-sharded-shard-1", "TSR1")
 sh.addShardToZone("my-mongo-mongodb-sharded-shard-0", "TSR2")
@@ -186,7 +184,6 @@ You can run **db.my\_users.getShardDistribution()** to view the data distributio
 ```
 [direct: mongos]> db.my_users.getShardDistribution()
 
-
 Shard my-mongo-mongodb-sharded-shard-0 at my-mongo-mongodb-sharded-shard-0/my-mongo-mongodb-sharded-shard0-data-0.my-mongo-mongodb-sharded-headless.default.svc.cluster.local:27017,my-mongo-mongodb-sharded-shard0-data-1.my-mongo-mongodb-sharded-headless.default.svc.cluster.local:27017
 {
   data: '144KiB',
@@ -195,7 +192,6 @@ Shard my-mongo-mongodb-sharded-shard-0 at my-mongo-mongodb-sharded-shard-0/my-mo
   'estimated data per chunk': '144KiB',
   'estimated docs per chunk': 1667
 }
-
 
 Shard my-mongo-mongodb-sharded-shard-1 at my-mongo-mongodb-sharded-shard-1/my-mongo-mongodb-sharded-shard1-data-0.my-mongo-mongodb-sharded-headless.default.svc.cluster.local:27017,my-mongo-mongodb-sharded-shard1-data-1.my-mongo-mongodb-sharded-headless.default.svc.cluster.local:27017
 {
@@ -370,23 +366,18 @@ function global:Convert-From-Base64 {
 ```
 import random
 
-
 import pymongo
-
-
 
 
 def do_stuff():
     client = pymongo.MongoClient("mongodb://root:tcDMM5sqNC@127.0.0.1:27017/?directConnection=true&serverSelectionTimeoutMS=2000")
     col = client.my_data.my_users
 
-
     usernames = ["dovahkiin", "rey", "dey", "see", "mee", "rollin", "they", "hating"]
     hobbies = ["coding", "recording", "streaming", "batman", "footbal", "sports", "mathematics"]
     ages = [18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28]
     # times = [12, 14, 15, 23, 45, 32, 20]
     times = [47, 80, 93, 49, 96, 43]
-
 
     buffer = []
     for _ in range(1_000):
@@ -400,8 +391,6 @@ def do_stuff():
             "t": random.choice(times)
         }))
     col.bulk_write(buffer)
-
-
 
 
 if __name__ == '__main__':

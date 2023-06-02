@@ -27,11 +27,6 @@ For example, take the following C program:
 
 
 ```
-```c
-#include 
-#include 
-
-
 int main() {
     if (ptrace(PTRACE_TRACEME, 0, 0, 0) < 0) {
       printf("I'm being debugged!n");
@@ -43,13 +38,9 @@ int main() {
 
 
 ```
-```
-
-
 If we execute the program from above we get `Normal flow` on our screen but if we debug it with `gdb` we get `Err: I'm being debugged!`
 
 
-```
 ```
 root@kali:~/Downloads# strace ./a.out 
 ...
@@ -63,43 +54,28 @@ write(1, "Err: I'm being debugged!n", 25Err: I'm being debugged!
 exit_group(0)                           = ?
 +++ exited with 0 +++
 ```
-```
-
 
 To bypass this, we can use the `LD_PRELOAD` environment variable. It lets us control the loading path of a shared library, which allows us to stub out library functions such as `ptrace`.
 
-
 We can create the following file:
 
-
-```
 ```c
 long ptrace(int request, int pid, void *addr, void *data) {
     return 0;
 }
 
-
 ```
-```
-
-
  And compile it as a shared library with the following command:
-
 
 **gcc -shared ptrace.c -o ptrace.so**
 
-
 Next, we can set the environment variable LD\_PRELOAD using the following commands:
-
 
 - in the shell: `export LD_PRELOAD=./ptrace.so`
 - in gdb: `set environment LD_PRELOAD=./ptrace.so`
 
-
 Demo:
 
-
-```
 ```
 gdb-peda$ file a.out 
 Reading symbols from a.out...
@@ -116,7 +92,6 @@ Normal flow
 [Inferior 1 (process 1946) exited normally]
 Warning: not running
 gdb-peda$ 
-```
 ```
 
 

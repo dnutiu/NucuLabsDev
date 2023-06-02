@@ -80,27 +80,21 @@ For a Golang application an example Dockerfile would look like this:
 # Golang is our base images.
 FROM golang:1.7
 
-
 # Make a directory called simplFT
 RUN mkdir -p /go/src/github.com/metonimie/simplFT/
-
 
 # Copy the current dir contents into simplFT
 ADD . /go/src/github.com/metonimie/simplFT/
 
-
 # Set the working directory to simplFT
 WORKDIR /go/src/github.com/metonimie/simplFT/
-
 
 # Install dependencies
 RUN go get "github.com/zyxar/image2ascii/ascii"
 RUN go get "github.com/spf13/viper"
 
-
 # Build the application
 RUN go build ./main.go
-
 
 # Run simplFT when the container launches
 CMD ["./main", "-config-name", "docker-config"]
@@ -147,7 +141,7 @@ A local development environment for WordPress would look like this:
 
 ```
 version: "3.9"
- 
+    
 services:
   db:
     image: mysql:5.7
@@ -159,7 +153,7 @@ services:
       MYSQL_DATABASE: wordpress
       MYSQL_USER: wordpress
       MYSQL_PASSWORD: wordpress
- 
+    
   wordpress:
     depends_on:
       - db

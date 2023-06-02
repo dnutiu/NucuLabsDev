@@ -66,19 +66,16 @@ Thanks for reading! 🍻
 ```
 package main
 
-
 import (
 	"fmt"
 	"sort"
 )
-
 
 type TheStruct struct {
 	Generation int
 	Time       int
 	Version    int
 }
-
 
 func main() {
 	var structs = []TheStruct{
@@ -129,9 +126,7 @@ func main() {
 		},
 	}
 
-
 	fmt.Printf("%v\n", structs)
-
 
 	sort.Slice(structs, func(i, j int) bool {
 		iv, jv := structs[i], structs[j]
@@ -145,7 +140,6 @@ func main() {
 		}
 	})
 	fmt.Printf("%v\n", structs)
-
 
 }
 ```

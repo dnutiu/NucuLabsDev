@@ -19,20 +19,16 @@ In order to easily solve this challenge, I’ve used xxd and cut to generate an 
 
 
 ```
-```
 ➜  Downloads xxd kitters.jpg | cut -d ' ' -f 11 > kittens_text.txt
 
 
 ➜  Downloads xxd cattos.jpg  | cut -d ' ' -f 11 > cattos_text.txt
 ```
-```
-
-
 Since I wanted to do a per character diff I wrote the following Python script:
 
 
 ```
-```python
+<pre class="wp-block-prismatic-blocks">```python
 def main():
     new = open("cattos_text.txt")
     old = open("kittens_text.txt")
@@ -44,16 +40,10 @@ def main():
             if old_char != line[1][number]:
                 print(line[1][number], end="")
 
-
 main()
 ```
-```
-
 
 And finally run the script:
-
-
-```
 ```
 ➜  Downloads python diff.py
 Loaded lines 212919 212919

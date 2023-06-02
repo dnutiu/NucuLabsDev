@@ -27,14 +27,10 @@ Hello,
 
 
 ```
-```
 brew install librdkafka openssl@3 pkg-config
 export PKG_CONFIG_PATH="/opt/homebrew/opt/openssl@3/lib/pkgconfig"
 go test -tags dynamic ./...
 ```
-```
-
-
 I’ve been transition from a Linux machine to a MacOS M1 machine at work and when I ran tests for a Golang project, I noticed that the test failed on modules depending on **librdkafka**.
 
 
@@ -45,32 +41,21 @@ This time however the problems was with my Golang dependencies and not the Docke
 
 
 ```
-```
 go test ./...
 [...]
 ld: warning: ignoring file /Users/dnutiu/go/pkg/mod/github.com/confluentinc/confluent-kafka-go@v1.8.2/kafka/librdkafka_vendor/librdkafka_darwin.a, building for macOS-arm64 but attempting to link with file built for macOS-x86_64
 Undefined symbols for architecture arm64:
 ```
-```
-
 
 “**Undefined symbols for architecture arm64**” My guess is that the published confluent-kafka-go package does not contain (yet) symbols for arm64, to fix the issues you can use the module with another librdkafka.
 
-
 When installing [librdkafka](https://formulae.brew.sh/formula/librdkafka) formula from Homebrew the library is built for arm64 architecture. To install run:
 
-
-```
 ```
 brew install librdkafka openssl@3 pkg-config
 ```
-```
-
-
 Next, we’ll use a tool called **[pkg-config](https://www.freedesktop.org/wiki/Software/pkg-config/)** to tell librdkafka where to find the other libraries, since it depends on openssl we need to export PKG\_CONFIG\_PATH. To grab the value run:
 
-
-```
 ```
 brew info openssl
 ==> openssl@3: stable 3.0.5 (bottled) [keg-only]
@@ -108,19 +93,16 @@ For compilers to find openssl@3 you may need to set:
 For pkg-config to find openssl@3 you may need to set:
   export PKG_CONFIG_PATH="/opt/homebrew/opt/openssl@3/lib/pkgconfig"
 ```
-```
 
 
 Check that everything works by running:
 
 
 ```
-```
 pkg-config --libs --cflags rdkafka
 
 
 -I/opt/homebrew/Cellar/openssl@3/3.0.5/include -I/opt/homebrew/Cellar/librdkafka/1.9.2/include -I/opt/homebrew/Cellar/zstd/1.5.2/include -I/opt/homebrew/Cellar/lz4/1.9.4/include -L/opt/homebrew/Cellar/librdkafka/1.9.2/lib -lrdkafka
-```
 ```
 
 

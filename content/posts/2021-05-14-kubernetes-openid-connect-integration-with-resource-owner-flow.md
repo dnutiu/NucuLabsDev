@@ -214,7 +214,6 @@ curl --request POST \
   --data username=nuculabs-kube@nuculabs.dev \
   --data 'password=Pa27rgN9KneN'
 
-
 {
   "access_token": "yepJxATWNN2hCZUmP4H4BzBaLycsUsJw",
   "id_token": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6Ik1FSkVNRVE1TWtFMlFrUTRNVEZFTWpZNE5qSkRORFkxTURBMk16bENORVJET1VNelJUSTBPUSJ9.eyJuaWNrbmFtZSI6Im51Y3VsYWJzLWt1YmUiLCJuYW1lIjoibnVjdWxhYnMta3ViZUBudWN1bGFicy5kZXYiLCJwaWN0dXJlIjoiaHR0cHM6Ly9zLmdyYXZhdGFyLmNvbS9hdmF0YXIvMzQ1NjMxNzQxNjU0ODViYWE1NDBjOTBkODc2MzAyN2I_cz00ODAmcj1wZyZkPWh0dHBzJTNBJTJGJTJGY2RuLmF1dGgwLmNvbSUyRmF2YXRhcnMlMkZudS5wbmciLCJ1cGRhdGVkX2F0IjoiMjAyMS0wNS0xM1QxOTo1Nzo0Mi42ODZaIiwiZW1haWwiOiJudWN1bGFicy1rdWJlQG51Y3VsYWJzLmRldiIsImVtYWlsX3ZlcmlmaWVkIjpmYWxzZSwiaXNzIjoiaHR0cHM6Ly9kbnV0aXUtZGV2LmV1LmF1dGgwLmNvbS8iLCJzdWIiOiJhdXRoMHw2MDlkNzlkMjk2OWU3MjAwNjhhNmFhNjciLCJhdWQiOiIxUmFKbWpoamFhcE5MR1hRamNZVmlRMTVaWXpab1pkTCIsImlhdCI6MTYyMDkzNTg2MiwiZXhwIjoxNjIwOTcxODYyfQ.avnUJv2aM0vpTkcoGiO54N4y765BxpXHV2alYAVXCpFeaNI2ISW-lW0sFUFrU3w35oM4p2Xh2tlMmVoQplSvJL0mJ9qZObMDvdqijFGdUbYN3XnD2F0kI5CCwshGhP59cbS_gdXIwwz3SOwDKKjGvacvEPcOofmhcBxNVW16qP7GS2JaAnrbGygCpj6AOyRcCkAL-jz0rxQCPrwZ5i1E4ofsbH0H8cVprYYazBpNRKPWcadcMqvGAXrtkrkSzHvrmTbQNaXi2rUiDzepDeJvciYJsNefLGmW2iStpB4KuN9M0wpXdV2PAd6lMYAd3sYSn_4NYLQKEbtmL5Sp1lkxow",
@@ -266,8 +265,6 @@ nuculabs-kube@nuculabs.dev
         id-token: eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6Ik1FSkVNRVE1TWtFMlFrUTRNVEZFTWpZNE5qSkRORFkxTURBMk16bENORVJET1VNelJUSTBPUSJ9.eyJuaWNrbmFtZSI6Im51Y3VsYWJzLWt1YmUiLCJuYW1lIjoibnVjdWxhYnMta3ViZUBudWN1bGFicy5kZXYiLCJwaWN0dXJlIjoiaHR0cHM6Ly9zLmdyYXZhdGFyLmNvbS9hdmF0YXIvMzQ1NjMxNzQxNjU0ODViYWE1NDBjOTBkODc2MzAyN2I_cz00ODAmcj1wZyZkPWh0dHBzJTNBJTJGJTJGY2RuLmF1dGgwLmNvbSUyRmF2YXRhcnMlMkZudS5wbmciLCJ1cGRhdGVkX2F0IjoiMjAyMS0wNS0xM1QxOTo1Nzo0Mi42ODZaIiwiZW1haWwiOiJudWN1bGFicy1rdWJlQG51Y3VsYWJzLmRldiIsImVtYWlsX3ZlcmlmaWVkIjpmYWxzZSwiaXNzIjoiaHR0cHM6Ly9kbnV0aXUtZGV2LmV1LmF1dGgwLmNvbS8iLCJzdWIiOiJhdXRoMHw2MDlkNzlkMjk2OWU3MjAwNjhhNmFhNjciLCJhdWQiOiIxUmFKbWpoamFhcE5MR1hRamNZVmlRMTVaWXpab1pkTCIsImlhdCI6MTYyMDkzNTg2MiwiZXhwIjoxNjIwOTcxODYyfQ.avnUJv2aM0vpTkcoGiO54N4y765BxpXHV2alYAVXCpFeaNI2ISW-lW0sFUFrU3w35oM4p2Xh2tlMmVoQplSvJL0mJ9qZObMDvdqijFGdUbYN3XnD2F0kI5CCwshGhP59cbS_gdXIwwz3SOwDKKjGvacvEPcOofmhcBxNVW16qP7GS2JaAnrbGygCpj6AOyRcCkAL-jz0rxQCPrwZ5i1E4ofsbH0H8cVprYYazBpNRKPWcadcMqvGAXrtkrkSzHvrmTbQNaXi2rUiDzepDeJvciYJsNefLGmW2iStpB4KuN9M0wpXdV2PAd6lMYAd3sYSn_4NYLQKEbtmL5Sp1lkxow
 ```
 ```
-
-
 Note: The authentication won’t work if the user doesn’t has it’s email verified: **E0513 20:03:32.089659 1 authentication.go:53\] Unable to authenticate the request due to an error: \[invalid bearer token, oidc: email not verified\]** you will need to create another user or set the user’s email as verified from the Auth0 interface.
 
 
@@ -277,11 +274,8 @@ To verify that the authentication works save the kubeconfig file and run:
 ```
 PS C:\Users\denis\Downloads> kubectl get services
 NAME         TYPE        CLUSTER-IP   EXTERNAL-IP   PORT(S)   AGE
-kubernetes   ClusterIP   10.96.0.1    
-        443/TCP   33m
+kubernetes   ClusterIP   10.96.0.1    <none>        443/TCP   33m
 ```
-
-
 If you change a single byte in the id-token, then the authentication won’t work anymore.
 
 
@@ -306,8 +300,6 @@ The [Kubernetes documentation](https://kubernetes.io/docs/reference/access-authn
   }
 }
 ```
-
-
 If an `expirationTimestamp` is provided along with the `token` then kubectl will cache the token until the token expires otherwise if the `expirationTimestamp` is missing then kubectl will use the token until the server responds with 401.
 
 
@@ -315,7 +307,7 @@ A kubectl file made for an ExecCredentials scenario would look like this:
 
 
 ```
-```
+<pre class="wp-block-code">```
 users:
 - name: nuculabs-kube@nuculabs.dev
   user:
@@ -327,17 +319,13 @@ users:
 ```
 ```
 
-
 Thank you for reading 📚!
-
 
 ## References:
 
-
-- 
-- 
-- 
-- 
-
+- <https://auth0.com/docs/flows/call-your-api-using-resource-owner-password-flow>
+- <https://octopus.com/blog/kubernetes-oauth>
+- <https://kubernetes.io/docs/reference/access-authn-authz/authentication/#openid-connect-tokens>
+- <https://developer.okta.com/docs/concepts/oauth-openid/#what-kind-of-client-are-you-building>
 
 Article cover photo by [贝莉儿 DANIST](https://unsplash.com/@danist07?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText).

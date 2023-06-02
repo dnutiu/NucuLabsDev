@@ -129,16 +129,13 @@ for(let i = 0; i < a.length; i++) {
     view.setInt32(i*4, a[i], true); // false for little-endian
 }
 
-
 let newBuffer = new ArrayBuffer(8); // create new buffer of size 8
 let newView = new DataView(newBuffer);
-
 
 for (let i = 0; i < a.length; i++) {
     let value = view.getInt32(i*4, true); // get value from original buffer
     newView.setInt32(i*4, value, true); // set value in new buffer
 }
-
 
 let newArray = new Int32Array(newBuffer);
 console.log(newArray)

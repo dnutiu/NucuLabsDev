@@ -34,6 +34,5 @@ Bellow, is my Fusuma config file:
 - - - - - -
 
 
-https://gist.github.com/dnutiu/d9f01946fd19315161fe641ebedd6e6a 
-My Fusuma config.yml
+https://gist.github.com/dnutiu/d9f01946fd19315161fe641ebedd6e6a My Fusuma config.yml
 Thanks for reading!

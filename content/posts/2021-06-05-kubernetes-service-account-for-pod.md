@@ -166,8 +166,7 @@ After the commands have finished running, we can execute any `kubectl` command f
 ```
 root@ubuntu-dev-68f4b48dd-fkhht:/# kubectl get services
 NAME         TYPE        CLUSTER-IP   EXTERNAL-IP   PORT(S)   AGE
-kubernetes   ClusterIP   10.245.0.1   
-        443/TCP   2d8h
+kubernetes   ClusterIP   10.245.0.1   <none>        443/TCP   2d8h
 ```
 
 
@@ -184,7 +183,6 @@ KUBERNETES_PORT_443_TCP_ADDR=10.245.0.1
 KUBERNETES_SERVICE_HOST=10.245.0.1
 KUBERNETES_PORT=tcp://10.245.0.1:443
 KUBERNETES_PORT_443_TCP_PORT=443
-
 
 root@ubuntu-dev-68f4b48dd-fkhht:/# ls /var/run/secrets/kubernetes.io/serviceaccount/
 ca.crt  namespace  token

@@ -40,17 +40,13 @@ Thanks to [Louis Rossman](https://www.youtube.com/user/rossmanngroup/videos), (t
 
 
 ![](/wp-content/uploads/2022/01/image-4.png?w=1024)
-![](/wp-content/uploads/2022/01/image-5.png?w=1024)
-I’m a software guy, I did not receive repair training and if there weren’t any guides or tools available, I’ll probably never figure how to do the battery change repair by myself without breaking the phone.
-![](/wp-content/uploads/2022/01/foto_no_exif.jpg?w=768)
-![](/wp-content/uploads/2022/01/foto_no_exif-1.jpg?w=768)
-![](/wp-content/uploads/2022/01/foto_no_exif-2.jpg?w=768)
-![](/wp-content/uploads/2022/01/1400e9cb-c513-470c-bc5c-80711932cedc.jpg?w=819)
+![](/wp-content/uploads/2022/01/image-5.png?w=1024)I’m a software guy, I did not receive repair training and if there weren’t any guides or tools available, I’ll probably never figure how to do the battery change repair by myself without breaking the phone.
+![](/wp-content/uploads/2022/01/foto_no_exif.jpg?w=768)![](/wp-content/uploads/2022/01/foto_no_exif-1.jpg?w=768)![](/wp-content/uploads/2022/01/foto_no_exif-2.jpg?w=768)![](/wp-content/uploads/2022/01/1400e9cb-c513-470c-bc5c-80711932cedc.jpg?w=819)
 The repair was a success and even though I’m not going to use the phone, I’m going to gift to someone that will be very happy to use it for a few more years.
 
 
 Read more about the right to repair:
 
 
-- 
-- 
+- https://www.ifixit.com/Right-to-Repair
+- https://repair.eu/

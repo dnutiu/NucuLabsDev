@@ -91,7 +91,6 @@ if you want to follow along or run the code from this article you will need to i
 
 
 ```
-```
 rustup install nightly
 rustup default nightly
 
@@ -99,9 +98,6 @@ rustup default nightly
 when you're done:
 rustup default stable
 ```
-```
-
-
 The problem we want to solve with SIMD instructions is to compute hamming distance on two vectors **equal in size**. The hamming distance between \[1, 2, 3\] and \[1, 3, 3\] is equal to **1** because **2 != 3**, the rest of the elements are equal.
 
 
@@ -110,12 +106,9 @@ The non-SIMD Rust function looks like this:
 
 ```
 #[inline(never)]
-fn hamming_distance_classic(a: &mut Vec
-, b: &mut Vec
-) -> u64 {
+fn hamming_distance_classic(a: &mut Vec<i32>, b: &mut Vec<i32>) -> u64 {
     let mut distance = 0;
     let length = a.len();
-
 
     for i in 0..length {
         if a[i] != b[i] {
@@ -123,73 +116,50 @@ fn hamming_distance_classic(a: &mut Vec
         }
     }
 
-
     return distance;
 }
 ```
-
-
 To preview the assembly a colleague recommended the [cargo-show-asm](https://crates.io/crates/cargo-show-asm) crate. You can install it and run the following command to show the assembly code for the given function
 
 
 ```
-```
 cargo asm --bin rust_simd "rust_simd::hamming_distance_classic"
 ```
-```
-
 
 The generated assembly looks like a simple loop:
 
-
-```
 ```
 .LBB12_4:
         cmp r8, rcx
 
-
         jae .LBB12_5
 
-
         mov r10d, dword ptr [rdi + 4*r9]
-
 
         xor r11d, r11d
         cmp r10d, dword ptr [rdx + 4*r9]
 
-
         lea r10, [r9 + 1]
-
 
         setne r11b
         add rax, r11
 
-
         mov r9, r10
-
 
         cmp rsi, r10
 
-
         jne .LBB12_4
-
 
         pop rcx
         .cfi_def_cfa_offset 8
         ret
 ```
-```
-
-
 Next, I’ll show my implementation that uses simd instructions:
 
-
-```
 ```
 #[inline(never)]
 fn hamming_distance_simd(a: &mut Vec
-, b: &mut Vec
-) -> u32 {
+, b: &mut Vec) -> u32 {
     let mut distance: u32 = 0;
     let lanes = 16;
     let chunks = a.len() / lanes;
@@ -208,13 +178,11 @@ fn hamming_distance_simd(a: &mut Vec
 
 
 ```
-```
 
 
 The assembly code for this function looks like this:
 
 
-```
 ```
 .LBB11_2:
         cmp r8, rsi
@@ -297,9 +265,6 @@ The assembly code for this function looks like this:
 
 
 ```
-```
-
-
 We can see that [XMM](https://en.wikibooks.org/wiki/X86_Assembly/SSE) registers are being used.
 
 
@@ -310,13 +275,11 @@ To benchmark the code I’ve used a block of code that I’ve copied from a Rust
 
 
 ```
-```
 mod bench {
     extern crate test;
     use self::test::Bencher;
     use std::iter;
     static BENCH_SIZE: usize = 128;
-
 
     macro_rules! bench {
         ($name:ident, $func:ident) => {
@@ -329,7 +292,6 @@ mod bench {
                                         .take(BENCH_SIZE)
                                         .collect();
 
-
                 b.iter(|| {
                     super::$func(&mut x, &mut y);
                 })
@@ -337,41 +299,28 @@ mod bench {
         }
     }
 
-
     bench!(simd, hamming_distance_simd);
     bench!(vanilla, hamming_distance_classic);
 }
 ```
-```
-
 
 The results are the following. The code written to use SIMD wins:
 
-
-```
 ```
 /home/denis/.cargo/bin/cargo bench --color=always --package rust_simd --bin rust_simd bench
     Finished bench [optimized] target(s) in 0.00s
      Running unittests src/main.rs (target/release/deps/rust_simd-2477d04109c1c861)
 
-
 running 2 tests
 test bench::simd    ... bench:          14 ns/iter (+/- 0)
 test bench::vanilla ... bench:          20 ns/iter (+/- 0)
 ```
-```
-
-
 ## Inlining the functions
-
 
 If we remove **\#\[inline(never)\]** then something interesting happens. The compiler sees that both functions are used only once and it decides to inline them.
 
-
 If we run cargo asm –bin rust\_simd the functions do not appear in the output:
 
-
-```
 ```
 Try one of those by name or a sequence number
  0 "alloc::alloc::box_free" [15]
@@ -395,13 +344,11 @@ Try one of those by name or a sequence number
 
 
 ```
-```
 
 
 Benchmarking the code again yields the following result:
 
 
-```
 ```
 /home/denis/.cargo/bin/cargo bench --color=always --package rust_simd --bin rust_simd bench
     Finished bench [optimized] target(s) in 0.00s
@@ -412,13 +359,9 @@ running 2 tests
 test bench::simd    ... bench:          20 ns/iter (+/- 0)
 test bench::vanilla ... bench:           0 ns/iter (+/- 0)
 ```
-```
-
-
 The vanilla block (classic hamming distance) function is much faster, and if we look at the assembly code we can see that the Rust compiler is smart and it auto vectorized the code to use SIMD instructions, unlike me the compiler is smarter and it’s code is better:
 
 
-```
 ```
 .LBB11_56:
         movq xmm3, qword ptr [r15 + 4*rdx]
@@ -446,15 +389,12 @@ The vanilla block (classic hamming distance) function is much faster, and if we 
         pandn xmm1, xmm2
         paddq xmm1, xmm3
 
-
         add rdx, 8
         add rsi, -2
         jne .LBB11_56
 
-
         test cl, 1
         je .LBB11_59
-
 
 .LBB11_58:
         movq xmm2, qword ptr [r15 + 4*rdx]
@@ -471,7 +411,6 @@ The vanilla block (classic hamming distance) function is much faster, and if we 
         pandn xmm2, xmm4
         paddq xmm1, xmm2
 
-
 .LBB11_59:
         paddq xmm0, xmm1
         pshufd xmm1, xmm0, 238
@@ -480,51 +419,36 @@ The vanilla block (classic hamming distance) function is much faster, and if we 
         cmp rdi, rax
         je .LBB11_61
 
-
 ```
-```
-
 
 The assembly for the **hamming\_distance\_simd** function looks like this:
 
-
-```
 ```
 .LBB11_40:
         cmp rdi, rax
         ja .LBB11_41
 
-
         cmp rdi, r12
         ja .LBB11_44
-
 
         movdqu xmm1, xmmword ptr [r15 + 4*rdi - 64]
         movdqu xmm2, xmmword ptr [r15 + 4*rdi - 48]
         movdqu xmm3, xmmword ptr [r15 + 4*rdi - 32]
         movdqu xmm4, xmmword ptr [r15 + 4*rdi - 16]
 
-
         movdqu xmm5, xmmword ptr [r10 + 4*rdi - 64]
-
 
         pcmpeqd xmm5, xmm1
 
-
         movdqu xmm1, xmmword ptr [r10 + 4*rdi - 48]
-
 
         pcmpeqd xmm1, xmm2
 
-
         movdqu xmm2, xmmword ptr [r10 + 4*rdi - 32]
-
 
         pcmpeqd xmm2, xmm3
 
-
         movdqu xmm3, xmmword ptr [r10 + 4*rdi - 16]
-
 
         pcmpeqd xmm3, xmm4
         pxor xmm3, xmm0
@@ -536,12 +460,10 @@ The assembly for the **hamming\_distance\_simd** function looks like this:
         packsswb xmm5, xmm2
         pmovmskb ebp, xmm5
 
-
         mov esi, ebp
         shr esi
         and esi, 21845
         sub ebp, esi
-
 
         mov esi, ebp
         and esi, 13107
@@ -557,32 +479,21 @@ The assembly for the **hamming\_distance\_simd** function looks like this:
         add esi, eax
         movzx eax, sil
 
-
         add r9d, eax
 
-
         add rdi, 16
-
 
         dec rcx
         mov rax, qword ptr [rsp + 8]
 
-
         jne .LBB11_40
 
-
 ```
-```
-
-
 We can also force a loop unrolling if we hard-code the chunks size in **hamming\_distance\_simd**:
 
-
-```
 ```
 fn hamming_distance_simd(a: &mut Vec
-, b: &mut Vec
-) -> u32 {
+, b: &mut Vec) -> u32 {
     let mut distance: u32 = 0;
     let lanes = 16;
     // let chunks = a.len() / lanes;
@@ -599,16 +510,12 @@ fn hamming_distance_simd(a: &mut Vec
     return distance;
 }
 ```
-```
 
 
 Then the assembly will become:
 
 
 ```
-```
-
-
         movdqu xmm0, xmmword ptr [r15]
         movdqu xmm1, xmmword ptr [r15 + 16]
         movdqu xmm2, xmmword ptr [r15 + 32]
@@ -962,40 +869,28 @@ Then the assembly will become:
 
 
 ```
-```
-
-
 You can see that by unrolling the loop there are exactly 8 code blocks that use SIMD instructions. The performance is slightly better but not by much:
 
 
-```
 ```
 /home/denis/.cargo/bin/cargo bench --color=always --package rust_simd --bin rust_simd bench
     Finished bench [optimized] target(s) in 0.00s
      Running unittests src/main.rs (target/release/deps/rust_simd-2477d04109c1c861)
 
-
 running 2 tests
 test bench::simd    ... bench:          17 ns/iter (+/- 1)
 test bench::vanilla ... bench:           0 ns/iter (+/- 0)
 ```
-```
-
 
 ## Conclusions
 
-
 I’m still a beginner rustacean and my journey is just getting started. I’ve tried to outsmart the Rust compiler by using SIMD instructions manually but that didn’t work that well. Rust figured out how to optimize and vectorize the loop code that wasn’t written with SIMD instructions in mind and in the end it gave much better performance.
-
 
 If you have suggestions on how to improve the code please let me know in the comments. 😀
 
-
 Thanks for reading! Happy hacking!
 
-
 - - - - - -
-
 
 ### Code
 
@@ -1003,8 +898,7 @@ Thanks for reading! Happy hacking!
 https://gist.github.com/dnutiu/8fc529d09d2872595cf2bf23d40e1cd2 
 ### Refferences
 
-
-- \[1\] 
+- \[1\] <https://www.cs.brandeis.edu/~cs146a/rust/rustbyexample-02-21-2015/simd.html>
 - [https://en.wikipedia.org/wiki/Single\_instruction,\_multiple\_data](https://en.wikipedia.org/wiki/Single_instruction,_multiple_data)
 - [https://en.wikipedia.org/wiki/Hamming\_distance](https://en.wikipedia.org/wiki/Hamming_distance)
 - [https://en.wikibooks.org/wiki/X86\_Assembly/SSE](https://en.wikibooks.org/wiki/X86_Assembly/SSE)

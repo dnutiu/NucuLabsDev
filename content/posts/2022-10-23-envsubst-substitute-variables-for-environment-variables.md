@@ -62,7 +62,6 @@ Then we run eventsubt to substitute the configuration values:
 export ENV_ENVIRONMENT=stagging
 export ENV_LOGLEVEL=trace
 
-
 envsubst < configuration-template.yaml > configuration.yaml
 ```
 

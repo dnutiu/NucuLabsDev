@@ -151,63 +151,44 @@ commits
 }
 ```
 
-
 Now, we need to upload the config to the Kafka Connect, I saved it as a file named github-connector-config.json and used curl to upload it. If the upload is successful the server should echo back your config:
-
 
 ```
 ➜ cp-all-in-one-community git:(5.5.1-post) ✗ curl -X POST -H "Content-Type: application/json" --data @github-connector-config.json http://localhost:8083/connectors
 {"name":"MyGithubConnector","config":{"connector.class":"io.confluent.connect.github.GithubSourceConnector","confluent.topic.bootstrap.servers":"broker:29092","tasks.max":"1","confluent.topic.replication.factor":"1","github.service.url":"https://api.github.com","github.repositories":"apache/kafka","github.tables":"commits","github.since":"2019-01-01","github.access.token":"xxx","topic.name.pattern":"github-avro-${entityName}","key.converter":"org.apache.kafka.connect.json.JsonConverter","value.converter":" org.apache.kafka.connect.json.JsonConverter","name":"MyGithubConnector"},"tasks":[],"type":"source"}%
 ```
 
-
-Visiting 
- now returns our config for our Github connector:
-
+Visiting <http://localhost:8083/connectors/> now returns our config for our Github connector:
 
 ```
 ["MyGithubConnector"]
 ```
 
-
-If we check it’s status (
-) we should see that the connector is already running:
-
+If we check it’s status (<http://localhost:8083/connectors/MyGithubConnector/status>) we should see that the connector is already running:
 
 ```
 {"name":"MyGithubConnector","connector":{"state":"RUNNING","worker_id":"connect:8083"},"tasks":[{"id":0,"state":"RUNNING","worker_id":"connect:8083"}],"type":"source"}
 ```
 
-
 The connector will pull all the commits it can get, in 5 minutes as I let it ran, It pulled over 2.5k in Github commits.
 
-
 I will stop it in order to preserve disk space:
-
 
 ```
 curl -X PUT localhost:8083/connectors/MyGithubConnector/pause
 ```
 
-
 ## Inspecting the data in Kafka
-
 
 To inspect the data I use a tool called [kafkacat](https://github.com/edenhill/kafkacat).
 
-
 Running `kafkacat -C -b localhost:9092 -t github-avro-commits` should show you the data collected from Github:
 
-
-```
-...
 ```
 "commit":{ "author":{ "name":"hejiefang", "email":"xxxx", "date":1546437651000 }, "committer":{ "name":"Manikumar Reddy", "email":"xxxx", "date":1546437651000 }, "message":"MINOR: Fix doc format in upgrade notes\n\nAuthor: hejiefang 
 \n\nReviewers: Srinivas 
 , Manikumar Reddy 
 \n\nCloses #6076 from hejiefang/modifynotable", "tree":{ "sha":"91db6646f829d6636011d09fdc8643e36280716b", "url":"https://api.github.com/repos/apache/kafka/git/trees/91db6646f829d6636011d09fdc8643e36280716b" }, "url":"https://api.github.com/repos/apache/kafka/git/commits/ffd6f2a2e8a573695d0c1c98e663f0b8198b1b6d", "comment_count":0, "verification":{ "verified":false, "reason":"unsigned", "signature":null, "payload":null } },
-```
-...
 ```
 
 

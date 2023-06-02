@@ -70,8 +70,6 @@ from PIL import Image
 import imagehash
 
 
-
-
 def hash_to_int(img_hash: imagehash.ImageHash):
     return int(str(img_hash), 16)
 ```
@@ -95,24 +93,18 @@ def main():
         Image.open("firetruck1.jpg")
     ]
 
-
     average_hashes = [hash_to_int(imagehash.average_hash(image)) for image in images]
     color_hashes = [hash_to_int(imagehash.colorhash(image)) for image in images]
 
-
     image_hashes = list(zip(images, average_hashes, color_hashes))
 
-
     source = image_hashes[0]
-
 
     for image in image_hashes:
         hamming_average_hash = bin(source[1] ^ image[1]).count("1")
         hamming_color_hash = bin(source[2] ^ image[2]).count("1")
         hamming_distance = hamming_average_hash + hamming_color_hash
         print("Hamming Distance between", source[0].filename, "and", image[0].filename, "is", hamming_distance)
-
-
 
 
 if __name__ == '__main__':
@@ -176,12 +168,8 @@ from PIL import Image
 import imagehash
 
 
-
-
 def hash_to_int(img_hash: imagehash.ImageHash):
     return int(str(img_hash), 16)
-
-
 
 
 def main():
@@ -192,24 +180,18 @@ def main():
         Image.open("firetruck1.jpg")
     ]
 
-
     average_hashes = [hash_to_int(imagehash.average_hash(image)) for image in images]
     color_hashes = [hash_to_int(imagehash.colorhash(image)) for image in images]
 
-
     image_hashes = list(zip(images, average_hashes, color_hashes))
 
-
     source = image_hashes[0]
-
 
     for image in image_hashes:
         hamming_average_hash = bin(source[1] ^ image[1]).count("1")
         hamming_color_hash = bin(source[2] ^ image[2]).count("1")
         hamming_distance = hamming_average_hash + hamming_color_hash
         print("Hamming Distance between", source[0].filename, "and", image[0].filename, "is", hamming_distance)
-
-
 
 
 if __name__ == '__main__':

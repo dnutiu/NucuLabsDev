@@ -59,8 +59,6 @@ This problem wasn’t very Pythonic and I actually want to practice my problem s
 from typing import List
 
 
-
-
 class Solution:
     def merge(self, nums1: List[int], nums2: List[int]) -> None:
         """
@@ -70,7 +68,6 @@ class Solution:
         # remove 0 from nums1
         nums2_index = 0
 
-
         for i, num in enumerate(nums1):
             # We've reached the end of nums2, means we're merged.
             if nums2_index == n:
@@ -79,12 +76,9 @@ class Solution:
                 nums1.insert(i, nums2[nums2_index])
                 nums2_index += 1
 
-
         # If there's anything left in nums2 we'll add it to the end
         for item in nums2[nums2_index:]:
             nums1.append(item)
-
-
 
 
 if __name__ == '__main__':

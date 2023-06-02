@@ -63,7 +63,6 @@ Context managers can be called using the **with** statement. The following code 
 ```
 from contextlib import contextmanager
 
-
 @contextmanager
 def simple_context_manager(function):
     try:
@@ -72,36 +71,29 @@ def simple_context_manager(function):
     finally:
         print("function call has ended")
 
-
 class SimpleContextManager:
     def __init__(self, cb):
         self.cb = cb
-
 
     def _intercept(self, *args, **kwargs):
         print(f"calling with {args} {kwargs}")
         return print(*args, **kwargs)
 
-
     def __enter__(self):
         print("intercept start")
         return self._intercept
 
-
     def __exit__(self, exc_type, exc_val, exc_tb):
         print("intercept end")
-
 
 def main():
     with simple_context_manager(print) as print_func:
         print_func("hi")
 
-
     with SimpleContextManager(print) as print_func:
         print_func("hi")
         print_func("hi", end="\n\n", sep=",")
         print_func("hi")
-
 
 if __name__ == '__main__':
     main()
@@ -127,12 +119,9 @@ def compute_fibonacci(number):
     return compute_fibonacci(number-1) + compute_fibonacci(number-2)
 
 
-
-
 class CachedComputeFibonacci:
     def __init__(self):
         self._cache = {}
-
 
     def __call__(self, *args, **kwargs):
         number = args[0]
@@ -142,27 +131,20 @@ class CachedComputeFibonacci:
         self._cache[number] = result
         return result
 
-
     def __enter__(self):
         return self
 
-
     def __exit__(self, exc_type, exc_val, exc_tb):
         pass
-
 
 def main():
     # Non cached
     print(compute_fibonacci(10))
 
-
     # Cached
     with CachedComputeFibonacci() as cached_compute_fibonacci:
         print(cached_compute_fibonacci(35))
         print(cached_compute_fibonacci(35))
-
-
-
 
 
 
@@ -184,12 +166,9 @@ def compute_fibonacci(number):
     return compute_fibonacci(number-1) + compute_fibonacci(number-2)
 
 
-
-
 class LoggedComputeFibonacci:
     def __init__(self):
         pass
-
 
     def __call__(self, *args, **kwargs):
         print(f"calling compute_fibonacci with args={args} kwargs={kwargs}")
@@ -197,23 +176,17 @@ class LoggedComputeFibonacci:
         print(f"compute_fibonacci={result}")
         return result
 
-
     def __enter__(self):
         return self
 
-
     def __exit__(self, exc_type, exc_val, exc_tb):
         pass
-
 
 def main():
     # Logging
     with LoggedComputeFibonacci() as cached_compute_fibonacci:
         print(cached_compute_fibonacci(35))
         print(cached_compute_fibonacci(36))
-
-
-
 
 
 
@@ -231,7 +204,6 @@ If you find yourself duplicating the same try/catch logic in multiple places of 
 ```
 from contextlib import contextmanager
 
-
 @contextmanager
 def my_error_handler():
     try:
@@ -239,14 +211,10 @@ def my_error_handler():
     except ZeroDivisionError:
         print("abort abort")
 
-
 def main():
     # error handling
     with my_error_handler():
         print("0 / 0 =", 0 / 0)
-
-
-
 
 
 

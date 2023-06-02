@@ -55,8 +55,7 @@ This is cool because all your scripts are stored in `~/ghidra_scripts` and linke
 If you click **Run** or **Debug**, Eclipse will be prompted to start a new Ghidra or Ghidra Headless instance, by clicking Debug, you can set breakpoints in the scripts you want to Debug. Run the scripts by opening *Ghidra’s Script Manager* and clicking *Run*. When the code reaches the breakpoints, the script’s execution will stop and you can debug it in Eclipse.
 
 
-- 
-![](/wp-content/uploads/2019/10/eclipse_6.png?w=1024)
+- ![](/wp-content/uploads/2019/10/eclipse_6.png?w=1024)
 
 
 You can then *resume* the script, *cancel* it from Ghidra or *modify* the script without having to restart Ghidra. If you hit the **stop** button Ghidra will shut down, I’ve encountered some popups complaining that hot code replacement won’t work when I tried to save a script, I ignored it and it worked just fine.
@@ -86,7 +85,6 @@ To get the system calls names I used a reference table from [Shell Storm](http:/
 ```
 table = document.getElementsByTagName("table")[0];
 tableRows = table.children[0].children;
-
 
 // for each tableRows starting from 1 skip header
 for (index = 1; index < tableRows.length; index++) {
@@ -437,8 +435,7 @@ VM66:9 systemCallNames.put(328, "pwritev2");
 Running the script on a binary will annotate the system calls it finds by adding a plate comment.
 
 
-- 
-![](/wp-content/uploads/2019/10/eclipse_7.png?w=1024)
+- ![](/wp-content/uploads/2019/10/eclipse_7.png?w=1024)
 - 
 ![](/wp-content/uploads/2019/10/ghidra_0-1.png?w=1024)
 

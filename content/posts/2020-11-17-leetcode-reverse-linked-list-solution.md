@@ -76,7 +76,6 @@ The complexity is O(n) for time and O(1) for space.
 ```
 using System;
 
-
 namespace LeetCode.November
 {
     public class ReverseLinkedListProb
@@ -86,14 +85,13 @@ namespace LeetCode.November
             public int val;
             public ListNode next;
 
-
             public ListNode(int val = 0, ListNode next = null)
             {
                 this.val = val;
                 this.next = next;
             }
         }
- 
+        
         // Space O(1) ; Time O(n)
         public ListNode ReverseListIterative(ListNode head)
         {
@@ -110,10 +108,8 @@ namespace LeetCode.November
                 head = next;
             }
 
-
             return prev;
         }
-
 
         // Space O(n) ; Time O(n)
         public ListNode ReverseListRecursion(ListNode head, ListNode prev)
@@ -127,14 +123,11 @@ namespace LeetCode.November
             return ReverseListRecursion(next, head);
         }
 
-
         public ListNode ReverseList(ListNode head)
         {
             var last = ReverseListIterative(head);
             return last;
         }
-
-
 
 
         public static void Test()

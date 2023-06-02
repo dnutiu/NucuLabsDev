@@ -118,7 +118,7 @@ After finishing level 3 I wanted to go to sleep and instead I thought of running
 
 ```
 binary@binary-VirtualBox:~/ctf$ ltrace ./lvl4
-__libc_start_main(0x4004a0, 1, 0x7ffd6fb460e8, 0x400650 
+__libc_start_main(0x4004a0, 1, 0x7ffd6fb460e8, 0x400650 <unfinished ...>
 setenv("FLAG", "656cf8aecb76113a4dece1688c61d0e7"..., 1)             = 0
 +++ exited (status 0) +++
 ```

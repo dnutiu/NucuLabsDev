@@ -37,10 +37,7 @@ To keep things as simple as possible I’ve put all my code in a single Python f
 import uvicorn as uvicorn
 from fastapi import FastAPI, APIRouter
 
-
 router = APIRouter(prefix="")
-
-
 
 
 def create_app():
@@ -49,13 +46,9 @@ def create_app():
     return fast_app
 
 
-
-
 @router.get("/")
 def read_root():
     return {"Hello": "World"}
-
-
 
 
 if __name__ == '__main__':

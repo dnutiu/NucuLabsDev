@@ -46,19 +46,14 @@ To demonstrate the use of the ProcessPoolExecutor I wrote a simple program for c
 from time import time
 
 
-
-
 def main():
     elements = 1_000_000_000
     arr = [i for i in range(1, elements)]
-
 
     start = time()
     print(sum(arr))
     end = time() - start
     print("Duration", end * 1000, "ms.")
-
-
 
 
 if __name__ == '__main__':
@@ -77,19 +72,14 @@ from concurrent.futures.process import ProcessPoolExecutor
 from time import time
 
 
-
-
 def compute_sum(start, stop):
     arr = [i for i in range(start, stop)]
     return sum(arr)
 
 
-
-
 def main():
     start = time()
     elements = 1_000_000_000
-
 
     with ProcessPoolExecutor(max_workers=20) as executor:
         # Steps will be a list from [0, 10000000, 20000000, ..., 990000000, 1000000000]
@@ -105,18 +95,14 @@ def main():
             # save the future
             results.append(future)
 
-
         # Retrieve the results and add up the sums.
         total_sum = 0
         for r in results:
             total_sum += r.result()
         print("Sum", total_sum)
 
-
     end = time() - start
     print("Duration", end * 1000, "ms.")
-
-
 
 
 if __name__ == '__main__':

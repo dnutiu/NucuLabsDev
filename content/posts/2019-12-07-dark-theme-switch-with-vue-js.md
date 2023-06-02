@@ -35,7 +35,6 @@ body {
     background-color: #2c3e50;
 }
 
-
 h1,h2,h3,h4,h5,h6,p {
     color: #42b983;
 }
@@ -47,7 +46,7 @@ We can test our theme by appending the following line in the `
 
 
 ```
- 
+    <link rel="stylesheet" href="<%= BASE_URL %>css/darktheme.css">
 ```
 
 
@@ -59,8 +58,7 @@ In `src/App.vue` we’ll add a button and the following methods:
 
 
 ```
- 
-Switch Theme
+    <button @click="darkThemeSwitch">Switch Theme</button>
 ```
 
 
@@ -71,7 +69,6 @@ Switch Theme
       darkThemeLinkEl.setAttribute("rel", "stylesheet");
       darkThemeLinkEl.setAttribute("href", "/css/darktheme.css");
       darkThemeLinkEl.setAttribute("id", "dark-theme-style");
-
 
       let docHead = document.querySelector("head");
       docHead.append(darkThemeLinkEl);

@@ -15,7 +15,7 @@ tags:
 - testing
 - testing tips
 title: 'Testing Tips: Avoid sleep in tests'
-weight: 1000
+weight: 100
 ---
 Hi 👋,
 
@@ -36,8 +36,7 @@ waiting for the message to be published
 
 
 The better approach is to use a **timeout** and **polling**, you can **
-poll at every millisecond
- to see if your test has done what you wanted to do instead of sleeping
+poll at every millisecond to see if your test has done what you wanted to do instead of sleeping
 **, this will improve the tests and reduce the execution time by a lot!
 
 
@@ -53,11 +52,9 @@ import (
 	"time"
 )
 
-
 type SystemUnderTest struct {
 	Result string
 }
-
 
 func (s *SystemUnderTest) SetResult() {
 	go func() {
@@ -65,7 +62,6 @@ func (s *SystemUnderTest) SetResult() {
 		s.Result = "the_result"
 	}()
 }
-
 
 func (s *SystemUnderTest) GetData() string {
 	time.Sleep(time.Duration(rand.Intn(3000)) * time.Millisecond)
@@ -85,9 +81,7 @@ func Test_SystemUnderTest_SetResult_NotIdeal(t *testing.T) {
 	sut := SystemUnderTest{}
 	sut.SetResult()
 
-
 	time.Sleep(4 * time.Second)
-
 
 	if sut.Result != "the_result" {
 		t.Fatalf("Result not equal, want %s got %s", "the_result", sut.Result)
@@ -116,7 +110,6 @@ A better way is to
 func Test_SystemUnderTest_SetResult(t *testing.T) {
 	sut := SystemUnderTest{}
 	sut.SetResult()
-
 
 	passedMilliseconds := 0
 	for {
@@ -153,16 +146,13 @@ If the language permits we can also use channels, let’s change the following f
 func Test_SystemUnderTest_GetData(t *testing.T) {
 	sut := SystemUnderTest{}
 
-
 	timeoutTicker := time.NewTicker(5 * time.Second)
 	result := make(chan string)
-
 
 	// Get result when ready
 	go func() {
 		result <- sut.GetData()
 	}()
-
 
 	select {
 	case <-timeoutTicker.C:

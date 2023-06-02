@@ -31,21 +31,17 @@ If you’d like to try out my configuration all you need to do is look at the fo
 sudo apt-get install vsftpd
 cp /etc/vsftpd.conf /etc/vsftpd.conf.orig
 
-
 # Make the directories for the server
 sudo mkdir -p /srv/vsftpd/root/public
 sudo touch /srv/vsftp/banner
-
 
 # Change permissions and set ownership
 sudo chown -R ftp:ftp /srv/vsftpd/
 sudo chmod -R 555 /srv/vsftpd/
 sudo chmod 775 /srv/vsftpd/root/public
 
-
 # Edit the configuration file
 # /etc/vsftpd.conf with editor of choice
-
 
 # Restart the service and check the status
 sudo systemctl restart vsftpd
@@ -60,38 +56,29 @@ The configuration file vsftpd.conf that I use can be found below:
 # Nucu Labs's BUSY vsFTPd server configuration file.
 # Denis Nutiu 09.02.2019
 
-
 # Scope of the server: The server is supposed to facilitate easy file sharing and should
 # be only available on the local network. No outside access is allowed!
-
 
 # The meaning of this configuration file and the full list of options can be found by
 # checking the manual page of vsftpd.
 
-
 listen=NO
 listen_ipv6=YES
 
-
 ### Debug Options
-
 
 # If enabled, a log file will be maintained detailing uploads and downloads. 
 # By default, this file will be placed at /var/log/vsftpd.log,
 xferlog_enable=YES
 
-
 # debug_ssl=YES
 # log_ftp_protocol=YES
 # syslog_enable=YES
 
-
 ###
-
 
 # If enabled, both the usernames ftp and anonymous are recognised as anonymous logins.
 anonymous_enable=YES
-
 
 # This option represents a directory which vsftpd will try to change into after an anonymous login. 
 # Failure is silently ignored.
@@ -99,39 +86,31 @@ anon_root=/srv/vsftp/root
 local_root=/srv/vsftp/root
 allow_writeable_chroot=YES
 
-
 # Enable local users to login to the FTP.
 local_enable=NO
-
 
 # This option is the name of a file containing text to display when someone connects to the server.
 banner_file=/srv/vsftp/banner
 
-
 # When enabled, this prevents vsftpd from asking for an anonymous password 
 # - the anonymous user will log straight in.
 no_anon_password=YES
-
 
 # If set to YES, anonymous users will be permitted to create new directories under certain conditions.
 # For this to work, the option write_enable must be activated, 
 # and the anonymous ftp user must have write permission on the parent directory.
 anon_mkdir_write_enable=YES
 
-
 # If set to YES, anonymous users will be permitted to perform write operations 
 # other than upload and create directory, such as deletion and renaming. 
 # This is generally not recommended but included for completeness.
 anon_other_write_enable=YES
 
-
 # If set to YES, anonymous users will be permitted to upload files under certain conditions.
 anon_upload_enable=YES
 
-
 # When enabled, anonymous users will only be allowed to download files which are world readable.
 anon_world_readable_only=YES
-
 
 # If enabled, all anonymously uploaded files will have the ownership changed 
 # to the user specified in the setting chown_username
@@ -139,22 +118,17 @@ chown_uploads=YES
 chown_username=ftp
 nopriv_user=ftp
 
-
 delete_failed_uploads=YES
-
 
 # If enabled, users of the FTP server can be shown messages when they first enter 
 # a new directory. By default, a directory is scanned for the file .message.
 dirmessage_enable=YES
 
-
 # If enabled, all user and group information in directory listings will be displayed as "ftp".
 hide_ids=YES
 
-
 # Allows: STOR, DELE, RNFR, RNTO, MKD, RMD, APPE and SITE.
 write_enable=YES
-
 
 # Upload files are executable.
 chown_upload_mode=0777
@@ -162,13 +136,10 @@ file_open_mode=0777
 local_umask=002
 anon_umask=002
 
-
 ###
-
 
 # Use the system's local time in GMT.
 use_localtime=YES
-
 
 # This option should be the name of a directory which is empty.  Also, the
 # directory should not be writable by the ftp user. This directory is used
@@ -176,10 +147,8 @@ use_localtime=YES
 # access.
 secure_chroot_dir=/var/run/vsftpd/empty
 
-
 # This string is the name of the PAM service vsftpd will use.
 pam_service_name=vsftpd
-
 
 # Uncomment this to indicate that vsftpd use a utf8 filesystem.
 utf8_filesystem=YES

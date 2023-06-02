@@ -30,35 +30,28 @@ Link to the problem:
 An image is represented by a 2-D array of integers, each integer representing the pixel
 value of the image (from 0 to 65535).
 
-
 Given a coordinate (sr, sc) representing the starting pixel (row and column) of the flood fill,
 and a pixel value newColor, "flood fill" the image.
-
 
 To perform a "flood fill", consider the starting pixel, plus any pixels connected 4-directionally
 to the starting pixel of the same color as the starting pixel, plus any pixels connected 4-directionally
 to those pixels (also with the same color as the starting pixel), and so on. Replace the color of all
 of the aforementioned pixels with the newColor.
 
-
 At the end, return the modified image.
 """
 from typing import List, Tuple
-
-
 
 
 class Solution:
     def __init__(self):
         self.visited = set()
 
-
     def _set_pixel(self, image: List[List[int]], point: Tuple[int, int], value: int):
         try:
             image[point[0]][point[1]] = value
         except IndexError:
             pass
-
 
     def _get_pixel(self, image: List[List[int]], point: Tuple[int, int]):
         if point[0] < 0 or point[1] < 0:
@@ -67,7 +60,6 @@ class Solution:
             return image[point[0]][point[1]]
         except IndexError:
             return None
-
 
     def _floodFill(self, image: List[List[int]], point: Tuple[int, int], color: int, newColor: int) -> List[List[int]]:
         pixel = self._get_pixel(image, point)
@@ -79,7 +71,6 @@ class Solution:
             self._floodFill(image, (point[0] + 1, point[1]), color, newColor)
             self._floodFill(image, (point[0] - 1, point[1]), color, newColor)
 
-
     def floodFill(self, image: List[List[int]], sr: int, sc: int, newColor: int) -> List[List[int]]:
         point = (sr, sc)
         pixel = self._get_pixel(image, point)
@@ -88,24 +79,19 @@ class Solution:
             self._floodFill(image, point, pixel, newColor)
         return image
 
-
 if __name__ == '__main__':
     s = Solution()
-
 
     out = s.floodFill([[1,1,1],[1,1,0],[1,0,1]], 1, 1, 2)
     print("Output", out)
     assert out == [[2,2,2],[2,2,0],[2,0,1]]
 
-
     out = s.floodFill([[0,0,0],[0,0,0]], 0, 0, 2)
     print("Output", out)
     assert out == [[2,2,2],[2,2,2]]
 
-
     out = s.floodFill([[0,0,0],[0,1,1]], 1, 1, 1)
     print("Output", out)
     assert out == [[0, 0, 0], [0, 1, 1]]
-
 
 ```

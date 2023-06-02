@@ -50,9 +50,7 @@ The following function lets you proceed to the next stage if and only if EDX is 
 ```
 weird_ret_addr_change proc near
 
-
 arg2_next_stage_address= dword ptr  4
-
 
 xor     eax, eax
 xor     eax, [esp+arg2_next_stage_address]

@@ -75,7 +75,6 @@ The iterative version of **RecursiveFib** looks like the following.
                 b = c;
             }
 
-
             return b;
         }
 ```
@@ -126,7 +125,6 @@ Thanks for reading and I hope you have learned something! 🍻
 using System;
 using System.Diagnostics;
 
-
 namespace TailRecursion
 {
     static class Program
@@ -140,7 +138,7 @@ namespace TailRecursion
                 _ => TailRecursiveFib(n - 1, b, a + b)
             };
         }
- 
+        
         private static long RecursiveFib(long n)
         {
             if (n <= 1)
@@ -149,7 +147,6 @@ namespace TailRecursion
             }
             return RecursiveFib(n - 1) + RecursiveFib(n - 2);
         }
-
 
         private static long IterativeFib(long n)
         {
@@ -166,10 +163,8 @@ namespace TailRecursion
                 b = c;
             }
 
-
             return b;
         }
-
 
         private static void Main(string[] args)
         {
@@ -181,7 +176,6 @@ namespace TailRecursion
                 IterativeFib(i * 10 );
                 TailRecursiveFib(i * 10, 0, 1);
             }
-
 
             long result = 0;
             st.Restart();

@@ -56,7 +56,6 @@ Run the following helm commands to install Loki. You may want to install [helm](
 ```
 helm repo add grafana https://grafana.github.io/helm-charts
 
-
 helm install loki grafana/loki -
 ```
 
@@ -68,14 +67,10 @@ You should get the following pods and services by running **kubectl get pods** a
 NAME                        READY   STATUS        RESTARTS   AGE
 loki-0                      1/1     Running       0          9m8s
 
-
 NAME            TYPE        CLUSTER-IP       EXTERNAL-IP   PORT(S)    AGE
-kubernetes      ClusterIP   10.152.183.1     
-        443/TCP    54m
-loki-headless   ClusterIP   None             
-        3100/TCP   9m23s
-loki            ClusterIP   10.152.183.187   
-        3100/TCP   9m23s
+kubernetes      ClusterIP   10.152.183.1     <none>        443/TCP    54m
+loki-headless   ClusterIP   None             <none>        3100/TCP   9m23s
+loki            ClusterIP   10.152.183.187   <none>        3100/TCP   9m23s
 ```
 
 
@@ -104,12 +99,10 @@ KUBE_EDITOR=code -w
 ```
 helm install grafana grafana/grafana
 
-
  kubectl edit service/grafana
 # Change metadata.spec.type to NodePort
 # Grab the service's port using kubectl get services and look for 32204:
-# grafana                         NodePort    10.152.183.84    
-        80:32204/TCP   6d
+# grafana                         NodePort    10.152.183.84    <none>        80:32204/TCP   6d
 ```
 
 

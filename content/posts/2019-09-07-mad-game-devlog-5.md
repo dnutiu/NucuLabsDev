@@ -48,14 +48,11 @@ Instead of setting prefabs to game objects manually in the editor, which is pron
     {   
         /* Snow Walls */
         public static readonly GameObject DestructibleHighSnow =
-            Resources.Load
-("Walls/destructible_high_snow");
+            Resources.Load<GameObject>("Walls/destructible_high_snow");
         public static readonly GameObject DestructibleSnow = 
-            Resources.Load
-("Walls/destructible_snow");
+            Resources.Load<GameObject>("Walls/destructible_snow");
         public static readonly GameObject IndestructibleWoodCrate =
-            Resources.Load
-("Walls/indestructible_crate");
+            Resources.Load<GameObject>("Walls/indestructible_crate");
     }
 ```
 
@@ -75,11 +72,10 @@ To create a singleton in Unity you can inherit from Singleton:
 
 
 ```
-public class MySingleton : Singleton
+public class MySingleton : Singleton<MySingleton>
 {
     // (Optional) Prevent non-singleton constructor use.
     protected MySingleton() { }
-
 
     // Then add whatever code to the class you need as you normally would.
     public string MyTestString = "Hello world!";

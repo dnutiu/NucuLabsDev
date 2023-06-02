@@ -70,8 +70,7 @@ Import the .ovpn file in your VPN client and change the ip `0.0.0.0` to the loca
 *Note: This will only work if you are connected to the same WiFi as the Pi is.*
 
 
-![](/wp-content/uploads/2018/06/fb9d2-1iivui8qo8fwtni_9ih9mmg.png)
-Viscosity successfully connected to my VPN server.
+![](/wp-content/uploads/2018/06/fb9d2-1iivui8qo8fwtni_9ih9mmg.png)Viscosity successfully connected to my VPN server.
 **I’ve configured my router so the PI always gets a reserved IP address. You may have to check out your router settings if you want to do something similar.**
 
 
@@ -170,91 +169,57 @@ sudo systemctl enable obfs4proxy
 ```
 ```
 
-
 1. Save the cert KEY
-
 
 After the service has started, run the following command and save the cert KEY.
 
-
 `cat /var/lib/tor/pt_state/obfs4/obfs4_bridgeline.txt`
 
-
-The key is of the form `Bridge obfs4 :  cert=
-KEY
- iat-mode=0` . You will need it when you’re connecting to the VPN.
-
+The key is of the form `Bridge obfs4 :  cert=<strong>KEY</strong> iat-mode=0` . You will need it when you’re connecting to the VPN.
 
 1. Testing the connections.
 
-
 Open up your VPN client and change the ip from 443 to 444 in order to connect to the proxy instead of the OpenVPN server.
-
 
 After that, find the Pluggable Transport option in your OpenVPN client and see if it supports **obfs4**.
 
-
-![](/wp-content/uploads/2018/06/892b1-1q3wdmwi7feqrmlpxcfby3w.png)
-Viscosity supports different Obfuscation methods such as: obfs2, obfs3, obfs4 and ScrambleSuit
-If everything works, then you’re all set! Congratulations! Only a few more things to tweak before using this VPN from the outside world.
-
+<figure class="wp-caption">![](/wp-content/uploads/2018/06/892b1-1q3wdmwi7feqrmlpxcfby3w.png)<figcaption class="wp-caption-text">Viscosity supports different Obfuscation methods such as: obfs2, obfs3, obfs4 and ScrambleSuit</figcaption></figure>If everything works, then you’re all set! Congratulations! Only a few more things to tweak before using this VPN from the outside world.
 
 ### **Port Forwarding**
 
-
 In order to access the OpenVPN server from the outside world we need to unblock the ports, because they are most likely blocked. As you remember, I have reserved my PI’s IP address on my router to always be `192.168.1.125` so it doesn’t change if the PI disconnects or if the router reboots.
-
 
 This way I have defined the following rules in my Port Forwarding table:
 
-
-![](/wp-content/uploads/2018/06/8b6f8-1brxo0rgpbzewvp0kf4xndw.png)
-TL-WR841N’s Port Forwarding settings page.
-The outside port **443** will point to the obfuscation’s server port **444.** If you don’t have an obfuscation server, then leave **443->443.**
-
+<figure class="wp-caption">![](/wp-content/uploads/2018/06/8b6f8-1brxo0rgpbzewvp0kf4xndw.png)<figcaption class="wp-caption-text">TL-WR841N’s Port Forwarding settings page.</figcaption></figure>The outside port **443** will point to the obfuscation’s server port **444.** If you don’t have an obfuscation server, then leave **443-&gt;443.**
 
 The port 25 will point to the PI’s SSH port 22. This is only for my own convenience.
 
-
-In case I want to access the OpenVPN server directly without the obfuscation proxy, I have created a rule **444->443**
-
+In case I want to access the OpenVPN server directly without the obfuscation proxy, I have created a rule **444-&gt;443**
 
 The service port is the **OUTSIDE** port that will be used with your **PUBLIC** IP address. To find your public IP, use a service like whatsmyip.com.
 
-
 The internal port is the **INSIDE** port. It can be used only when you are connected to the network.
-
 
 *Note: The first rule is saying redirect all the connections from* ***PUBLIC\_IP:443*** *to* ***192.168.1.125:444***
 
-
 #### Testing
-
 
 1. Find your public IP and replace your old IP with the public IP in the .ovpn file or in the VPN client.
 2. Connect to the VPN.
 
-
 That’s it.
-
 
 ### **Dynamic DNS**
 
-
 In most cases, your IP will change because it’s a dynamic IP. A way to overcome this is to create a small program on the PI that saves your IP and sends you an email every day or so. You may also store the IP in an online database such as Firebase.
-
 
 My router has Dynamic DNS setting. This way I can use a service provider like NoIP and get a domain like `example.no-ip.com` that will always point to my public IP address.
 
-
-![](/wp-content/uploads/2018/06/1e0dd-1xvd9i_-z7xympnqwhexuka.png)
-TL-WR841N DDNS settings page
-#### Other Resources:
-
+<figure class="wp-caption">![](/wp-content/uploads/2018/06/1e0dd-1xvd9i_-z7xympnqwhexuka.png)<figcaption class="wp-caption-text">TL-WR841N DDNS settings page</figcaption></figure>#### Other Resources:
 
 - [A Childs Garden Of Pluggable Transports](https://trac.torproject.org/projects/tor/wiki/doc/AChildsGardenOfPluggableTransports)
 - V[iscosity-Obsfurcation/](https://www.sparklabs.com/support/kb/article/setting-up-an-obfuscation-server-with-obfsproxy-and-viscosity/)
-- 
-
+- <https://www.pluggabletransports.info/transports/>
 
 If you have any questions hit me up on [Twitter](https://twitter.com/nuculabs).

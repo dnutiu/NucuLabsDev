@@ -43,9 +43,7 @@ You’ll also do it like this:
 
 
 ```
-{ provide: 
-HTTP_INTERCEPTORS
-, useClass: NoopInterceptor, multi: true }
+{ provide: <a href="https://angular.io/api/common/http/HTTP_INTERCEPTORS" rel="noopener" target="_blank">HTTP_INTERCEPTORS</a>, useClass: NoopInterceptor, multi: true }
 ```
 
 
@@ -56,9 +54,7 @@ The way interceptors work is that they look at the request then they call next o
 
 
 ```
-intercept(
-req
-: HttpRequest, next: HttpHandler):
+intercept(<strong>req</strong>: HttpRequest, next: HttpHandler):
     Observable {
     return next.handle(req);
   }
@@ -70,13 +66,10 @@ As far as I know you can’t configure interceptors to activate on certain condi
 
 ```
 /** Simulate server replying to file upload request */
-@Injectable
-()
+<a href="http://twitter.com/Injectable" rel="noopener" target="_blank" title="Twitter profile for @Injectable">@Injectable</a>()
 export class UploadInterceptor implements HttpInterceptor {
   intercept(req: HttpRequest, next: HttpHandler): Observable {
-    if (
-req.url.indexOf('/upload/file'
-) === -1) {
+    if (<strong>req.url.indexOf('/upload/file'</strong>) === -1) {
       return next.handle(req); // do nothing
     }
     const delay = 300;

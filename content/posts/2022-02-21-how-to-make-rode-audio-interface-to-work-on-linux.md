@@ -27,7 +27,6 @@ I have recently updated the firmware of my RODE audio interface from 1.12.x to 1
 ```
 dmesg -kH
 
-
 [feb21 16:20] usb 1-9.3: 1:1: cannot set freq 44100 to ep 0x82
 [  +0,005008] usb 1-9.3: 1:1: cannot set freq 44100 to ep 0x82
 [  +0,005019] usb 1-9.3: 1:1: cannot set freq 44100 to ep 0x82

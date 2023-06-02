@@ -1,10 +1,4 @@
 ---
-advanced_seo_description:
-- ''
-- ''
-amp_status:
-- ''
-- ''
 author: "Denis Nu\u021Biu"
 categories:
 - Programming
@@ -13,9 +7,6 @@ guid: http://nuculabs.dev/?p=949
 id: 949
 layout: post
 permalink: /2020/04/26/leetcode-arrays-101-introduction-solutions/
-spay_email:
-- ''
-- ''
 tags:
 - leetcode
 - Python
@@ -64,11 +55,9 @@ class Solution:
 ```
 class Solution:
 
-
     @staticmethod
     def is_even(value):
         return len(str(value)) % 2 == 0
-
 
     def findNumbers(self, nums: List[int]) -> int:
         return_value = 0

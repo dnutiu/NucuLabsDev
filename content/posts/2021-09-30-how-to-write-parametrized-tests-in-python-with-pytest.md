@@ -31,8 +31,6 @@ If you want to follow along, here’s the code that I’ve tested in the video.
 from typing import List
 
 
-
-
 class Solution:
     def move_zeroes(self, nums: List[int]) -> None:
         last_zero = 0
@@ -44,15 +42,11 @@ class Solution:
             index += 1
 
 
-
-
 def main():
     solution = Solution()
     arr = [1,0,1]
     solution.move_zeroes(arr)
     print(arr)
-
-
 
 
 if __name__ == '__main__':

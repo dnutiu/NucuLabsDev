@@ -52,7 +52,7 @@ Apply the following edits to the file, you can replace the **connect** block and
 
 
 ```
- 
+  
   connect:
     image: cnfldemos/kafka-connect-datagen:0.5.0-6.2.0
     hostname: connect
@@ -82,7 +82,6 @@ Apply the following edits to the file, you can replace the **connect** block and
       CONNECT_LOG4J_LOGGERS: org.apache.zookeeper=ERROR,org.I0Itec.zkclient=ERROR,org.reflections=ERROR
       KAFKA_JMX_PORT: 9102
       KAFKA_JMX_HOSTNAME: localhost
-
 
   mongodb:
     image: mongo:4.2-rc-bionic
@@ -178,7 +177,6 @@ curl -s -O http://packages.confluent.io/archive/6.2/confluent-community-6.2.0.ta
 tar -xzf .\confluent-community-6.2.0.tar.gz
 cd .\confluent-6.2.0\bin\
 
-
  ./kafka-topics --bootstrap-server localhost:9092 --list
 __consumer_offsets
 __transaction_state
@@ -189,10 +187,8 @@ docker-connect-configs
 docker-connect-offsets
 docker-connect-status
 
-
 ./kafka-topics --bootstrap-server localhost:9092 --create --topic events --partitions 3
 Created topic events.
-
 
 ./kafka-topics --bootstrap-server localhost:9092 --create --topic events.deadletter --partitions 3
 WARNING: Due to limitations in metric names, topics with a period ('.') or underscore ('_') could collide. To avoid issues, it is best to use either, but not both.
@@ -339,8 +335,7 @@ switched to db my_events
 J[Console ](https://docs.oracle.com/javase/7/docs/technotes/guides/management/jconsole.html)is a tool that can be used to view JMX metrics exposed by Kafka Connect, if you installed openjdk-8 it should come with it
 
 
-- 
-![](/wp-content/uploads/2021/09/image-1.png)
+- ![](/wp-content/uploads/2021/09/image-1.png)
 
 
 Start JConsole and connect to **localhost:9102**. If you get a warning about an insecure connection, accept the connection, and ignore it.
@@ -349,8 +344,7 @@ Start JConsole and connect to **localhost:9102**. If you get a warning about an 
 After you’re connected click the MBeans tab and explore 🦹‍♀️
 
 
-- 
-![](/wp-content/uploads/2021/09/image-2.png)
+- ![](/wp-content/uploads/2021/09/image-2.png)
 
 
 ## Summary

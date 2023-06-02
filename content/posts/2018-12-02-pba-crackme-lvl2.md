@@ -87,7 +87,7 @@ If we do a **ltrace ./lvl2** we can see the library calls the program does:
 
 
 ```
-__libc_start_main(0x400500, 1, 0x7fff5c6b0ec8, 0x400640 
+__libc_start_main(0x400500, 1, 0x7fff5c6b0ec8, 0x400640 <unfinished ...>
 time(0)                                                      = 1543667140
 srand(0x5c027dc4, 0x7fff5c6b0ec8, 0x7fff5c6b0ed8, 0)         = 0
 rand(0x7ff89538f620, 0x7fff5c6b0dac, 0x7ff89538f0a4, 0x7ff89538f11c) = 0x6e66a24a
@@ -121,10 +121,10 @@ If we disassemble the binary with lvl2 with: **objdump -d -M intel lvl2 > lvl2\_
  0000000000400500 <.text>:
   400500:	48 83 ec 08          	sub    rsp,0x8
   400504:	31 ff                	xor    edi,edi
-  400506:	e8 c5 ff ff ff       	call   4004d0 
+  400506:	e8 c5 ff ff ff       	call   4004d0 <time@plt>
   40050b:	89 c7                	mov    edi,eax
-  40050d:	e8 ae ff ff ff       	call   4004c0 
-  400512:	e8 c9 ff ff ff       	call   4004e0 
+  40050d:	e8 ae ff ff ff       	call   4004c0 <srand@plt>
+  400512:	e8 c9 ff ff ff       	call   4004e0 <rand@plt>
   400517:	99                   	cdq    
   400518:	c1 ea 1c             	shr    edx,0x1c
   40051b:	01 d0                	add    eax,edx
@@ -133,7 +133,7 @@ If we disassemble the binary with lvl2 with: **objdump -d -M intel lvl2 > lvl2\_
   400522:	48 98                	cdqe   
   400524:	48 8b 3c c5 60 10 60 	mov    rdi,QWORD PTR [rax*8+0x601060]
   40052b:	00 
-  40052c:	e8 6f ff ff ff       	call   4004a0 
+  40052c:	e8 6f ff ff ff       	call   4004a0 <puts@plt>
   400531:	31 c0                	xor    eax,eax
   400533:	48 83 c4 08          	add    rsp,0x8
   400537:	c3                   	ret    
@@ -148,9 +148,7 @@ What does the binary do? It does a srand(time(0)) and calls rand(), does some co
 ```
 binary@binary-VirtualBox:~/code/chapter5$ objdump -s --section .data lvl2
 
-
 lvl2:     file format elf64-x86-64
-
 
 Contents of section .data:
  601040 00000000 00000000 00000000 00000000  ................
@@ -177,9 +175,7 @@ This section looks like it’s containing pointers to something followed by a nu
 ```
 binary@binary-VirtualBox:~/code/chapter5$ objdump -s --section .rodata lvl2
 
-
 lvl2:     file format elf64-x86-64
-
 
 Contents of section .rodata:
  4006c0 01000200 30330034 66006334 00663600  ....03.4f.c4.f6.

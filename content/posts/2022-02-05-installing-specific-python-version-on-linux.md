@@ -118,7 +118,6 @@ To test the installation run:
 python3.9 --version
 Python 3.9.9
 
-
 pip3.9 --version
 pip 21.2.4 from /usr/local/lib/python3.9/site-packages/pip (python 3.9)
 ```
@@ -145,7 +144,6 @@ Then, to test the installation run:
 ```
 root@ubuntu:/# python3.9 --version
 Python 3.9.10
-
 
 root@ubuntu:/# python3.9 -m pip --version
 pip 20.0.2 from /usr/lib/python3/dist-packages/pip (python 3.9)

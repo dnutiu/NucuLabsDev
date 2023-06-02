@@ -25,15 +25,11 @@ I’m always late to the party but here’s my solutions to the PicoCTF2019 Vaul
 The password is in the source code. You can copy/paste it and put it in the picoCTF{flag} format.
 
 
-```
 ```java
     public boolean checkPassword(String password) {
         return password.equals("w4rm1ng_Up_w1tH_jAv4_3b500738c12");
     }
 ```
-```
-
-
 ##  vault-door-1 – Points: 100
 
 
@@ -50,7 +46,6 @@ The third challenge uses loops and array in order to construct the password, we 
 
 
 ```
-```java
         String s = new String(buffer);
         System.out.print("s: " + s);
         //in  jU5t_a_s01234567 89abcdefghijklmn
@@ -60,23 +55,17 @@ The third challenge uses loops and array in order to construct the password, we 
         return s.equals("jU5t_a_sna_3lpm13gc49_u_4_m0rf41");
     }
 
-
     public static void main(String[] args) {
         boolean result = checkPassword("jU5t_a_s0123456789abcdefghijklmn");
         System.out.print("nDone: " + result);
     }
 ```
-```
-
 
 ## vault-door-4 – Points: 250
 
-
 The 4th vault door challenge is even easier, all you need to do is convert numbers from different bases back to ASCII characters. Use online number converters.
 
-
 ```
-```java
         byte[] myBytes = {
             106 , 85  , 53  , 116 , 95  , 52  , 95  , 98  , // ascii: jU5t_4_b
             0x55, 0x6e, 0x43, 0x68, 0x5f, 0x30, 0x66, 0x5f, // hex: UnCh_0f_
@@ -85,17 +74,11 @@ The 4th vault door challenge is even easier, all you need to do is convert numbe
             // jU5t_4_bUnCh_0f_bYt3s_3a724c8f92
         };
 ```
-```
-
-
 ## vault-door-5 – Points: 300
-
 
 This challenge has the password URL Encoded then Base64 Encode, to solve it you just decode it. You can do it using [CyberChef](https://gchq.github.io/CyberChef/#recipe=From_Base64('A-Za-z0-9%2B/%3D',true)URL_Decode()&input=SlRZekpUTXdKVFpsSlRjMkpUTXpKVGN5SlRjMEpUTXhKVFpsSlRZM0pUVm1KVFkySlRjeUpUTXdKVFprSlRWbUpUWXlKVFl4SlRNMUpUWTFKVFZtSlRNMkpUTTBKVFZt).
 
-
 ```
-```java
     public boolean checkPassword(String password) {
         String urlEncoded = urlEncode(password.getBytes());
         String base64Encoded = base64Encode(urlEncoded.getBytes());
@@ -105,7 +88,6 @@ This challenge has the password URL Encoded then Base64 Encode, to solve it you 
         return base64Encoded.equals(expected);
     }
 ```
-```
 
 
 ## vault-door-6 – Points: 350
@@ -114,7 +96,6 @@ This challenge has the password URL Encoded then Base64 Encode, to solve it you 
 This challenge uses a XOR encryption scheme, we can defeat it using CyberChef or modify the code and run it to spit out the password:
 
 
-```
 ```
     public void checkPassword() {
         byte[] myBytes = {
@@ -128,9 +109,6 @@ This challenge uses a XOR encryption scheme, we can defeat it using CyberChef or
         }
     }
 ```
-```
-
-
 ## vault-door-7 – Points: 400
 
 
@@ -144,7 +122,6 @@ The final challenge can be solved by reversing the steps of the scramble functio
 
 
 ```
-```java
  public char[] scramble(String i) {
   /* Scramble a password by transposing pairs of bits. */
   char[] a = i.toCharArray();
@@ -166,7 +143,5 @@ The final challenge can be solved by reversing the steps of the scramble functio
   System.out.println("Expected " + String.valueOf(expected));
   System.out.println("Scrambled " + String.valueOf(scramble(String.valueOf(expected))));
 ```
-```
-
 
 That’s all! Hope you liked it.

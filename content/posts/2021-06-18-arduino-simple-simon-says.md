@@ -86,7 +86,6 @@ The code is written in C++, and it uses classes, if you see this for the first t
  * 
  */
 
-
 /*
  * The game class, handles everything.
  */
@@ -129,7 +128,6 @@ class Game {
     int readButton(int buttonPin);
 };
 
-
 /* Pin settings */
 static const int Game::MICROPHONE_PIN       = 12;
 static const int Game::BLUE_PIN             = 11;
@@ -147,7 +145,6 @@ static const int Game::YELLOW_TONE          = 600;
 static const int Game::GREEN_TONE           = 800;
 static const int Game::GAMEOVER_TONE        = 1000;
 
-
 // Construct and initialize the Game object.
 Game::Game(int difficulty) : gameSpeed(1000), lastButtonValue(-1), currentLevel(0), gameDifficulty(difficulty), gameIsOver(0) {
     Serial.print("Constructing game object with difficulty: ");
@@ -159,7 +156,6 @@ Game::Game(int difficulty) : gameSpeed(1000), lastButtonValue(-1), currentLevel(
     pinMode(Game::YELLOW_PIN, OUTPUT);
 }
 
-
 Game::Game() : gameSpeed(1000), lastButtonValue(-1), currentLevel(0), gameDifficulty(10), gameIsOver(0) {
     Serial.println("Constructing game object");
     pinMode(Game::MICROPHONE_PIN, OUTPUT);
@@ -168,7 +164,6 @@ Game::Game() : gameSpeed(1000), lastButtonValue(-1), currentLevel(0), gameDiffic
     pinMode(Game::GREEN_PIN, OUTPUT);
     pinMode(Game::YELLOW_PIN, OUTPUT);
 }
-
 
 /*
  * Makes sure the button is pressed only once.
@@ -183,7 +178,6 @@ int Game::debounce(int last, int buttonPin) {
       return current;
 }
 
-
 /*
  * Plays a note. 
  * Receives the button number and plays the corresponding note.
@@ -193,19 +187,18 @@ void Game::playNote(int note, int noteSpeed) const {
     Serial.print(note);
     Serial.print(" with speed: ");
     Serial.println(noteSpeed);
- 
+    
     note = Game::getNote(note);
- 
+    
     tone(Game::MICROPHONE_PIN, note, noteSpeed);  
 }
-
 
 /*
  * Returns the corresponding color code based on pin.
  */
 int Game::colorCodeToPin(int value) {
     int ret_val = -1;
- 
+   
     switch(value) {
       case RED:
           ret_val = Game::RED_PIN;
@@ -225,10 +218,8 @@ int Game::colorCodeToPin(int value) {
         exit(0);
     }
 
-
     return ret_val;
 }
-
 
 /*
  * Converts the button pin to a color code.
@@ -254,10 +245,8 @@ int Game::pinToColorCode(int value) {
           exit(0);
     }
 
-
     return ret_val;
 }
-
 
 /*
  * The the corresponding note based on the color code it receives.
@@ -288,7 +277,6 @@ int Game::getNote(int note) const {
     return return_value;
 }
 
-
 /*
  * Flashes a led. Receives the led code and sets it to the corresponding pin.
  */
@@ -298,15 +286,12 @@ void Game::flashLed(int led, int flashSpeed) const {
     Serial.print(" with speed: ");
     Serial.println(flashSpeed);
 
-
     led = Game::colorCodeToPin(led);
-
 
     digitalWrite(led, HIGH);
     delay(flashSpeed);
     digitalWrite(led, LOW);
 }
-
 
 /*
  * Plays the next level.
@@ -320,14 +305,13 @@ void Game::playLevel() {
   if (Game::gameSpeed - nextDificulty >= 10) {
     Game::gameSpeed -= nextDificulty; // decrease the speed;
   }
- 
+  
   // Play all the moves
   for (int i = 0; i < Game::currentLevel; ++i) {
       Game::playNote(Game::gameLevel[i], Game::gameSpeed);
       Game::flashLed(Game::gameLevel[i], Game::gameSpeed);
   }
 }
-
 
 /*
  * Reads the button value and returns the following codes:
@@ -347,7 +331,6 @@ int Game::readButton(int buttonPin) {
     return return_value;
 }
 
-
 int Game::gameOver() {
     Serial.println("game_is_over: Checking if game is over!");
     if (Game::gameIsOver) {
@@ -355,7 +338,6 @@ int Game::gameOver() {
     }
     return Game::gameIsOver;
 }
-
 
 /*
  * Gets the user button presses and checks them to see if they're good.
@@ -375,7 +357,6 @@ int Game::userInput() {
           if (buttonPressed != -1) { break; }
       }
 
-
       if (buttonPressed != gameLevel[i]) {
           Game::playNote(4, 100); // game over note, and game over note speed.
           Game::flashLed(buttonPressed, 1000);
@@ -388,13 +369,11 @@ int Game::userInput() {
     return 1;
 }
 
-
 Game g(50); //  Constructs the game object.
 void setup() {
   Serial.begin(9600);
   randomSeed(0);
 }
-
 
 void loop() {
   if (g.gameOver()) { 

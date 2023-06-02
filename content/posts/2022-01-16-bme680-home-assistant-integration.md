@@ -61,8 +61,7 @@ The first step is to buy the sensor, get one with headers already soldered if yo
 I got mine from[ Pimoroni ](https://shop.pimoroni.com/)and I’ve never was disappointed by them, they deliver to EU.
 
 
-![](/wp-content/uploads/2022/01/image.png?w=1024)
-BME680 sensor. Pimoroni screen capture 2022-01-16
+![](/wp-content/uploads/2022/01/image.png?w=1024)BME680 sensor. Pimoroni screen capture 2022-01-16
 Next depending on which headers you’ve chosen; you will need four male-to-female jumper wires to connect the BME680 to the Raspberry Pi.
 
 
@@ -146,7 +145,6 @@ homeassistant:
       friendly_name: Air Quality
       device_class: pm25
       unit_of_measurement: "%"
-
 
 sensor:
   - platform: bme680

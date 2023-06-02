@@ -66,26 +66,19 @@ When you’re ready to deploy your documentation website, say in Docker with Ngi
 ```
 FROM python:3.9 as builder
 
-
 WORKDIR /app
-
 
 COPY . .
 
-
 RUN pip install mkdocs mkdocs-material && mkdocs build
 
-
 FROM nginx as deploy
-
 
 # Copy the build to the nginx directory.
 COPY --from=builder /app/site/ /usr/share/nginx/html/
 
-
 # Copy the nginx configuration to the nginx config directory.
 COPY default.conf /etc/nginx/conf.d/
-
 
 EXPOSE 8080:8080/tcp
 ```

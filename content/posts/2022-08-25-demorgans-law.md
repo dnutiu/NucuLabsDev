@@ -25,12 +25,10 @@ if __name__ == '__main__':
     a = True
     b = True
 
-
     if not (a and b):
         print("True")
     else:
         print("False")
-
 
     if not a or not b:
         print("True")

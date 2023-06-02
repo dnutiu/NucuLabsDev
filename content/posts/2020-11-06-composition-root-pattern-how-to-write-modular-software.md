@@ -70,49 +70,39 @@ class Translator(metaclass=abc.ABCMeta):
         raise NotImplementedError("translate must be implemented!")
 ```
 ```
-
-
 Every class that extends my abstract classes must implement it’s abstract methods:
 
 
 ```
-```
+<pre class="wp-block-code">```
 class ConsolePrinter(Printer):
     def __init__(self, prefix: str):
         self._prefix = prefix
 
-
     def print(self, message: Message):
         print(self._prefix, message)
-
 
 class ConsoleInputListener(InputListener):
     def __init__(self, prompt: str):
         self._prompt = prompt
 
-
     def get_input(self) -> str:
         return input(self._prompt)
-
 
 class RomanianTranslator(Translator):
     def translate(self, message: Message) -> Message:
         words_map = {"hello": "salut"}
         message_words = str(message).split(" ")
 
-
         for index, word in enumerate(message_words):
             if word.lower() in words_map.keys():
                 message_words[index] = words_map[word]
-
 
         return Message(" ".join(message_words))
 ```
 ```
 
-
 The Message class, for the sake of completeness only holds a string.
-
 
 ```
 ```
@@ -120,17 +110,12 @@ class Message:
     def __init__(self, message):
         self._message = message
 
-
     def __str__(self):
         return self._message
 
-
 ```
 ```
-
-
 And finally, the Application class will glue all the components together and instantiate them:
-
 
 ```
 ```
@@ -187,13 +172,11 @@ if __name__ == '__main__':
 
 ```
 ```
-
-
 Running the application would output:
 
 
 ```
- starting application.
+<pre class="wp-block-preformatted"> starting application.
  < hello Denis!
  > salut Denis! 
 ```

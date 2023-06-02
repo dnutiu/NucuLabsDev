@@ -30,13 +30,9 @@ class Encoder(metaclass=abc.ABCMeta):
         raise NotImplementedError("encode must be implemented!")
 
 
-
-
 class Rot13Encoder(metaclass=abc.ABCMeta):
     def encode(self, message: Message) -> Message:
         return Message(codecs.encode(str(message), 'rot_13'))
-
-
 
 
 class NullEncoder(metaclass=abc.ABCMeta):
@@ -62,7 +58,6 @@ class ConsolePrinter(Printer):
     def __init__(self, prefix: str):
         self._prefix = prefix
 
-
     def print(self, message: Message, encoder: Encoder):
         print(self._prefix, encoder.encode(message))
 ```
@@ -82,7 +77,6 @@ class ConsolePrinter(Printer):
     def __init__(self, prefix: str):
         self._prefix = prefix
         self.encoder = NullEncoder()
-
 
     def print(self, message: Message):
         print(self._prefix, self.encoder.encode(message))

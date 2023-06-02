@@ -59,9 +59,7 @@ Now that we know the calling convention, it’s easier to figure out how functio
 
 
 ```
-int scanf(const char *
-format
-, ...);
+int scanf(const char *format, ...);
 ```
 
 

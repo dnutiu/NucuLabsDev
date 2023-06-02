@@ -52,8 +52,7 @@ Last but not least we weren’t satisfied with the enemies, we still have some b
 What I did instead was to try to make some decent enemy sprites in Aseprite, Cosmigo Pro Motion doesn’t work on my Mac :(.
 
 
-[![](https://res.cloudinary.com/practicaldev/image/fetch/s--hXrZvSWU--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_66%2Cw_880/https://thepracticaldev.s3.amazonaws.com/i/c2c63qusqinlosn1hlst.gif)](https://res.cloudinary.com/practicaldev/image/fetch/s--hXrZvSWU--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_66%2Cw_880/https://thepracticaldev.s3.amazonaws.com/i/c2c63qusqinlosn1hlst.gif)
-Snow Enemy v1
+[![](https://res.cloudinary.com/practicaldev/image/fetch/s--hXrZvSWU--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_66%2Cw_880/https://thepracticaldev.s3.amazonaws.com/i/c2c63qusqinlosn1hlst.gif)](https://res.cloudinary.com/practicaldev/image/fetch/s--hXrZvSWU--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_66%2Cw_880/https://thepracticaldev.s3.amazonaws.com/i/c2c63qusqinlosn1hlst.gif)Snow Enemy v1
 Since I don’t have enough practice my sprites don’t look that good, I tried to keep them as simple as possible and I’ve only used two key frames when animating them.
 
 

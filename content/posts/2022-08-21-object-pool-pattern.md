@@ -75,13 +75,11 @@ func demo1() {
 		return NewResource()
 	}}
 
-
 	for i := 0; i < 10; i++ {
 		item := theResourcePool.Get().(*Resource)
 		item.doWork()
 		theResourcePool.Put(item)
 	}
-
 
 	println("done", counter)
 }
@@ -125,7 +123,6 @@ func demo2() {
 		return NewResource()
 	}}
 
-
 	for i := 0; i < 10; i++ {
 		wg.Add(1)
 		go func() {
@@ -135,10 +132,8 @@ func demo2() {
 			theResourcePool.Put(item)
 		}()
 
-
 	}
 	wg.Wait()
-
 
 	println("done", counter)
 }
@@ -188,7 +183,6 @@ func demo3() {
 		return NewResource()
 	}}
 
-
 	for i := 0; i < 10; i++ {
 		wg.Add(1)
 		go func() {
@@ -200,10 +194,8 @@ func demo3() {
 			theResourcePool.Put(item)
 		}()
 
-
 	}
 	wg.Wait()
-
 
 	println("done", counter)
 }
@@ -261,7 +253,6 @@ Thanks for reading! 📚
 ```
 package main
 
-
 import (
 	"fmt"
 	"log"
@@ -270,15 +261,12 @@ import (
 	"time"
 )
 
-
 var logger = log.Default()
 var counter = 0
-
 
 type Resource struct {
 	id string
 }
-
 
 func NewResource() *Resource {
 	logger.Printf("NewResource called")
@@ -286,11 +274,9 @@ func NewResource() *Resource {
 	return &Resource{id: fmt.Sprintf("Resource-%d", counter)}
 }
 
-
 func (r *Resource) doWork() {
 	logger.Printf("%s doing work", r.id)
 }
-
 
 func demo1() {
 	println("demo1")
@@ -298,17 +284,14 @@ func demo1() {
 		return NewResource()
 	}}
 
-
 	for i := 0; i < 10; i++ {
 		item := theResourcePool.Get().(*Resource)
 		item.doWork()
 		theResourcePool.Put(item)
 	}
 
-
 	println("done", counter)
 }
-
 
 func demo2() {
 	println("demo2")
@@ -316,7 +299,6 @@ func demo2() {
 	theResourcePool := sync.Pool{New: func() any {
 		return NewResource()
 	}}
-
 
 	for i := 0; i < 10; i++ {
 		wg.Add(1)
@@ -327,14 +309,11 @@ func demo2() {
 			theResourcePool.Put(item)
 		}()
 
-
 	}
 	wg.Wait()
 
-
 	println("done", counter)
 }
-
 
 func demo3() {
 	println("demo2")
@@ -342,7 +321,6 @@ func demo3() {
 	theResourcePool := sync.Pool{New: func() any {
 		return NewResource()
 	}}
-
 
 	for i := 0; i < 10; i++ {
 		wg.Add(1)
@@ -355,14 +333,11 @@ func demo3() {
 			theResourcePool.Put(item)
 		}()
 
-
 	}
 	wg.Wait()
 
-
 	println("done", counter)
 }
-
 
 func main() {
 	demo1()

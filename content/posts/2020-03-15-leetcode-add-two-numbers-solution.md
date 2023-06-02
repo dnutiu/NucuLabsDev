@@ -25,12 +25,9 @@ Here’s my solution for the add two numbers problem on LeetCode.
 
 
 ```
-Input:
- (2 -> 4 -> 3) + (5 -> 6 -> 4)
-Output:
- 7 -> 0 -> 8
-Explanation:
- 342 + 465 = 807.
+<strong>Input:</strong> (2 -> 4 -> 3) + (5 -> 6 -> 4)
+<strong>Output:</strong> 7 -> 0 -> 8
+<strong>Explanation:</strong> 342 + 465 = 807.
 ```
 
 
@@ -47,12 +44,10 @@ class Solution(object):
             _root = _root.next
         return __add_to_list
 
-
     def _compute(self, result, base=10):
         carry = result // base
         rest = result % base
         return carry, rest
-
 
     def addTwoNumbers(self, l1, l2):
         """
@@ -62,7 +57,6 @@ class Solution(object):
         """
         root_node = None
         root_append_func = None
-
 
         term_1 = l1
         term_2 = l2
@@ -74,25 +68,20 @@ class Solution(object):
                     root_append_func(saved_carry)
                 break
 
-
             # We haven't reached the end, we assume that whatever term is left is 0
             if term_1 is None:
                 term_1 = ListNode(0)
             if term_2 is None:
                 term_2 = ListNode(0)
 
-
             # add the two terms
             term_sum_carry, term_sum_no_carry = self._compute(term_1.val + term_2.val)
-
 
             # add sum to current carry
             next_carry, total_with_carry = self._compute(term_sum_no_carry + saved_carry)
 
-
             # save carry
             saved_carry = term_sum_carry + next_carry
-
 
             # save total
             if not root_node:
@@ -101,11 +90,9 @@ class Solution(object):
             else:
                 root_append_func(total_with_carry)
 
-
             # move on
             term_1 = term_1.next
             term_2 = term_2.next
-
 
         return root_node
 ```

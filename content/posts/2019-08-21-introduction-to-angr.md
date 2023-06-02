@@ -29,26 +29,20 @@ For the first challenge we have the following source code:
 
 ```
 //written by bla
-#include 
-#include 
-#include 
-
-
-
+#include <stdio.h>
+#include <string.h>
+#include <unistd.h>
 
 
 
 int main(int argc, char **argv)
 {
 
-
         int count = atoi(argv[1]);
         int buf[10];
 
-
         if(count >= 10 ) 
                 return 1;
-
 
         //printf("%lx\n", (size_t)(count * sizeof(int)));
         memcpy(buf, argv[2], count * sizeof(int));
@@ -59,12 +53,8 @@ int main(int argc, char **argv)
                 printf("Not today son\n");
 
 
-
-
         return 0;
 }
-
-
 
 
 ```
@@ -81,24 +71,19 @@ The goal is to find two arguments to give to the program in order to overflow bu
 import angr
 import claripy
 
-
 def resolve_win(state):
     # if the bytes of "WIN" are found in stdout it returns true
     return  b"WIN" in state.posix.dumps(1)
 
-
 if __name__ == '__main__':
     print("starting.")
-
 
     # Declare project, load the binary
     proj = angr.Project('./lab-13/0-tutorial/level07')
 
-
     # Create a 32-bit symbolic bitvector named "password"
     arg1 = claripy.BVS('sym_arg', 8 * 11)  # maximum 11 * 8 bits
     arg2 = claripy.BVS('sym_arg', 8 * 44)  # maximum 44 * 8 bits
-
 
     # We construct an entry_state passing the two arguments
     st = proj.factory.entry_state(args=['./level07', arg1, arg2])
@@ -106,28 +91,23 @@ if __name__ == '__main__':
     # resolve strings that are of at most 11 bytes length (the default is 10)
     st.libc.max_strtol_len = 11
 
-
     # Now we will create what in angr terms is called a simulation manager.
     # https://docs.angr.io/core-concepts/pathgroups
     pg = proj.factory.simgr(st)
-
 
     # This can be read as: explore looking for the path p for which the current state
     # p.state contains the string "WIN" in its standard output (p.state.posix.dumps(1),
     # where 1 is the file descriptor for stdout).
     pg.explore(find=resolve_win)
 
-
     print("solution found")
     s = pg.found[0]
     print(s.posix.dumps(1)) # dump stdout
-
 
     # Print and eval the fist argument
     print("Arg1: ", s.solver.eval(arg1, cast_to=bytes))
     # Print and eval the second argument
     print("Arg2: ", s.solver.eval(arg2, cast_to=bytes))
-
 
 ```
 
@@ -161,37 +141,29 @@ At this point we can google for online caesar cipher, paste the string that got 
 import angr
 import claripy
 
-
 if __name__ == '__main__':
     print("starting")
     proj = angr.Project("./multiple-styles", auto_load_libs=False)
 
-
     # Create a 32-bit symbolic bitvector named "password"
     password = claripy.BVS('password', 20*8)
-
 
     # We construct a blank_state with the address of main and we pass password to stdin
     st = proj.factory.blank_state(addr=0x004009ae, stdin=password)
 
-
     # We create a simulation manager
     pg = proj.factory.simulation_manager(st)
-
 
     # We tell angr to look for 0x00400a6c which is the starting address of the green block
     # that prints "you got it!" while telling him to avoid the address 0x00400a40
     pg.explore(find=(0x00400a6c), avoid=(0x00400a40))
 
-
     print("solution found")
     # We grab the solution.
     s = pg.found[0]
 
-
     # We can print the contents of stdin - 0:
     print("Flag: ", s.posix.dumps(0))
-
 
     # We can also get the password from our symbolic bitvector
     print("Pass: ", s.solver.eval(password, cast_to=bytes))

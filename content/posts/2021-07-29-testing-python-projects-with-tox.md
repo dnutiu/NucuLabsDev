@@ -37,15 +37,12 @@ To get started all you need to add to your project is a tox.ini file. To simplif
 ```
 FROM ubuntu:20.04
 
-
 RUN apt update && apt install -y software-properties-common \
                && add-apt-repository ppa:deadsnakes/ppa \
                && apt install -y python3.6 && apt install -y python3.7 \
                && apt install -y python3-pip && pip3 install tox
 
-
 VOLUME /code
-
 
 WORKDIR /code
 ENTRYPOINT tox
@@ -61,7 +58,6 @@ A tox.ini file which tests using python 3.6 and python 3.7 looks like this:
 skip_missing_interpreters = True
 envlist = py36,py37
 
-
 [testenv]
 # install pytest in the virtualenv where commands will be executed
 deps =
@@ -71,7 +67,6 @@ deps =
 commands =
     # NOTE: you can run any command line tool here – not just tests
     pytest
-
 
 [testenv:bamboo]
 commands =
@@ -109,18 +104,14 @@ __pycache__  tests.py  tox.ini
 # @denis ➜ tox_article cat tests.py
 import unittest
 
-
 class TestStringMethods(unittest.TestCase):
-
 
     def test_upper(self):
         self.assertEqual('foo'.upper(), 'FOO')
 
-
     def test_isupper(self):
         self.assertTrue('FOO'.isupper())
         self.assertFalse('Foo'.isupper())
-
 
     def test_split(self):
         s = 'hello world'
@@ -128,7 +119,6 @@ class TestStringMethods(unittest.TestCase):
         # check that s.split fails when the separator is not a string
         with self.assertRaises(TypeError):
             s.split(2)
-
 
 if __name__ == '__main__':
     unittest.main()%
@@ -141,7 +131,6 @@ if __name__ == '__main__':
 skip_missing_interpreters = True
 envlist = py36,py37
 skipsdist = True
-
 
 [testenv]
 commands =
@@ -161,7 +150,6 @@ py36 run-test: commands[0] | python -m unittest
 ----------------------------------------------------------------------
 Ran 3 tests in 0.000s
 
-
 OK
 py37 create: /code/.tox/py37
 py37 run-test-pre: PYTHONHASHSEED='520882151'
@@ -169,7 +157,6 @@ py37 run-test: commands[0] | python -m unittest
 ...
 ----------------------------------------------------------------------
 Ran 3 tests in 0.000s
-
 
 OK
 ___________________________________ summary ____________________________________

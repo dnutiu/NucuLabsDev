@@ -23,8 +23,7 @@ You can install Python fire from pip by running these commands:
 
 
 ```
-pip install ipython
-pip install fire
+pip install ipython<br></br>pip install fire
 ```
 
 

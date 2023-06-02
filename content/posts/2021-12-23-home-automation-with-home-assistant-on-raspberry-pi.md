@@ -62,7 +62,6 @@ country=us
 update_config=1
 ctrl_interface=/var/run/wpa_supplicant
 
-
 network={
    scan_ssid=1
    ssid="YOUR_WIFI_SSID"
@@ -107,13 +106,11 @@ To create a new service:
 Description=HomeAssistant Service
 After=network.target
 
-
 [Service]
 User=homeassistant
 WorkingDirectory=/home/homeassistant
 Environment="PATH=$PATH:/srv/homeassistant/bin"
 ExecStart=/srv/homeassistant/bin/hass
-
 
 [Install]
 WantedBy=multi-user.target

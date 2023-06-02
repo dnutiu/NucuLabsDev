@@ -34,7 +34,6 @@ JNE: Jump short if not equal (ZF=0)
 
 
 ```
-```
 asm1:
 	<+0>:	push   ebp # 
 	<+1>:	mov    ebp,esp # 
@@ -66,9 +65,6 @@ asm1:
 
 
 ```
-```
-
-
 ## Next Levels
 
 
@@ -83,12 +79,9 @@ Here’s the modified code for the **asm3** task:
 
 
 ```
-```c
 .intel_syntax noprefix
 
-
 .global asm3
-
 
 asm3:
 	push   ebp
@@ -103,18 +96,12 @@ asm3:
 	pop    ebp
 	ret    
 
-
 ```
-```
-
 
 What we’re going to do next is to write a simple main.c program that calls the functions with the required arguments:
 
-
-```
 ```c
-#include 
-
+#include <stdio.h>
 
 int main(void) {
     printf("Hello World!");
@@ -123,18 +110,12 @@ int main(void) {
     // printf("Flag: %un", asm4("picoCTF_fdb55"));
 }
 ```
-```
-
-
 Next we’re going to compile the assembly code, the main.c file and the final executable:
 
-
-```
 ```
  gcc -m32 -c asm3.S -o asm3.o -fno-stack-protector -no-pie
  gcc -m32 -c main.c -o main.o -fno-stack-protector -no-pie
  gcc -m32 -o a.out main.o asm3.o -fno-stack-protector -no-pie
-```
 ```
 
 

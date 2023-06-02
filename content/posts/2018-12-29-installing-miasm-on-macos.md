@@ -107,11 +107,8 @@ Next step is to add miasm’s jitter libraries to the path. Your miasm location 
 
 
 ```
-```
 xport DYLD_LIBRARY_PATH="~/miasm/miasm/build/lib.macosx-10.14-x86_64-2.7/miasm2/jitter:~/miasm/miasm/build/lib.macosx-10.14-x86_64-2.7/miasm2/jitter/arch"
 
-
-```
 ```
 
 

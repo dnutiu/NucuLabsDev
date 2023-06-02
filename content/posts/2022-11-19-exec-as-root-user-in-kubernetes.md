@@ -39,7 +39,6 @@ We wan’t root access into a running container, exec gives us non-root user.
 NAME                     READY   STATUS    RESTARTS   AGE
 my-release-cassandra-0   1/1     Running   0          2m9s
 
-
 ➜  Downloads k exec -it pod/my-release-cassandra-0 -- /bin/bash
 I have no name!@my-release-cassandra-0:/$ whoami
 whoami: cannot find name for user ID 1001

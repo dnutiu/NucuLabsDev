@@ -15,16 +15,14 @@ tags:
 - Wifi
 title: How to get started with FreeRTOS and ESP8266
 ---
-![](/wp-content/uploads/2018/06/babe3-12fa1exr1zeewua54bby3ag.jpeg)
-[Cover Photo by Matan Segev from PexelsCover](https://www.pexels.com/photo/action-android-device-electronics-595804/)
+![](/wp-content/uploads/2018/06/babe3-12fa1exr1zeewua54bby3ag.jpeg)[Cover Photo by Matan Segev from PexelsCover](https://www.pexels.com/photo/action-android-device-electronics-595804/)
 Recently, I purchased a NodeMCU from AliExpress for about $4. The reason I did this was to find out what all the fuss is about with ESP8266.
 
 
 NodeMCU is an open source IoT platform. It includes firmware which runs on the ESP8266 Wi-Fi SoC from Espressif Systems, and hardware which is based on the ESP-12 module.
 
 
-![](/wp-content/uploads/2018/06/8a6c3-1eweuexslju_l6gorgaev-w.png)
-Source: ESP8266 Datasheet
+![](/wp-content/uploads/2018/06/8a6c3-1eweuexslju_l6gorgaev-w.png)Source: ESP8266 Datasheet
 Compared to the Arduino UNO, my ESP8266 totally knocks it out of the park when it comes to CPU power and price.
 
 
@@ -55,8 +53,7 @@ In this article, I will guide you to setup and run the Smart Config example from
 2. Make sure that you can access the internet from within the virtual machine and configure the DNS server:
 
 
-![](/wp-content/uploads/2018/06/9bef0-1v-sf25lacxuvayb-x0zueq.png)
-Right click the machine then Settings -> Network
+![](/wp-content/uploads/2018/06/9bef0-1v-sf25lacxuvayb-x0zueq.png)Right click the machine then Settings -> Network
 To configure the DNS server, have a look at this [example](https://askubuntu.com/questions/346838/how-do-i-configure-my-dns-settings-in-ubuntu-server).
 
 
@@ -67,15 +64,13 @@ To configure the DNS server, have a look at this [example](https://askubuntu.com
 2. **(Optional)** Enable port forwarding. In order to SSH directly into your virtual machine, you need to enable port forwarding. For example, to map the **port 2222** on your **host machine** to the **port 22** of your **virtual machine**.
 
 
-![](/wp-content/uploads/2018/06/e6d54-1mopy98pu7j-nnjcczvxika.png)
-Enable Port forwarding: Settings -> Network -> **Port Forwarding**
+![](/wp-content/uploads/2018/06/e6d54-1mopy98pu7j-nnjcczvxika.png)Enable Port forwarding: Settings -> Network -> **Port Forwarding**
 
 
 If you have enabled port forwarding, you can now SSH into your virtual machine from your Host machine as in the figure below.
 
 
-![](/wp-content/uploads/2018/06/9eda8-1yh8lzg3ik59kcvuk2xp-sq.png)
-FIG1: ssh -p 2020 denis@localhost
+![](/wp-content/uploads/2018/06/9eda8-1yh8lzg3ik59kcvuk2xp-sq.png)FIG1: ssh -p 2020 denis@localhost
 Note: If you’re on Windows, you need **Putty** in order to SSH into the virtual machine.
 
 
@@ -88,8 +83,7 @@ Note: If you’re on Windows, you need **Putty** in order to SSH into the virtua
 This should reveal to you that the device has been identified as /dev/ttyUSB0. If nothing happens, then you need to add the USB to the virtual machine. After adding the USB, unplug and plug your device in again.
 
 
-![](/wp-content/uploads/2018/06/9cfeb-1ze6kztdjsfp47enx8mkxuw.png)
-Adding USB: Settings -> Ports -> USB
+![](/wp-content/uploads/2018/06/9cfeb-1ze6kztdjsfp47enx8mkxuw.png)Adding USB: Settings -> Ports -> USB
 If you’ve reached this point and every thing is working, **congratulations**! You’re now ready to compile the SDK and run the SmartConfig example. You can even shoot me a tweet at 
 
 
@@ -117,8 +111,7 @@ sudo apt-get install make unrar-free autoconf automake libtool gcc g++ gperf fle
 **Warning: This step will take a while to finish so please be patient.** On my virtual machine it completed after 50 minutes. On yours it might take more or less, but before you run, make make sure that you’re **connected to the internet** and **DNS is properly configured**. The best way to check this is to execute a ping to Google or some other site if Google is blocked in your region.
 
 
-![](/wp-content/uploads/2018/06/f6765-1ukoiccf6gk6k0ttefwsirw.png)
-Successful ping command: $ ping medium.com
+![](/wp-content/uploads/2018/06/f6765-1ukoiccf6gk6k0ttefwsirw.png)Successful ping command: $ ping medium.com
 If your ping is successful, you can minimize the windows and watch an episode of your favorite TV show. Come back after about 40 minutes (but make sure your computer doesn’t go to sleep).
 
 
@@ -145,8 +138,7 @@ If the command executes successfully, then you’re good to go!
 Plug your NodeMCU and run **lsusb** to verify that your device is connected. After that, run **esptool.py chip\_id**. You should now see the board’s chip id.
 
 
-![](/wp-content/uploads/2018/06/b88f3-13mr6jko3o-82qvsdc9rknw.png)
-esptool.py chip\_id
+![](/wp-content/uploads/2018/06/b88f3-13mr6jko3o-82qvsdc9rknw.png)esptool.py chip\_id
 5\. Clone [ESP8266\_RTOS\_SDK](https://github.com/espressif/ESP8266_RTOS_SDK)
 
 
@@ -172,9 +164,7 @@ echo 'export BIN_PATH=/home/denis/Development/ESP8266_RTOS_SDK/bin' >> ~/.profil
 
 
 ```
-cd /home/denis/Development/ESP8266_RTOS_SDK/examples/
-smart_config
-/
+cd /home/denis/Development/ESP8266_RTOS_SDK/examples/<strong>smart_config</strong>/
 ```
 
 

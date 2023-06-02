@@ -32,7 +32,6 @@ Next, we can add a manual user by clicking **Users** tab and **Add user**.
 Now, to login with our newly created user, we make a POST request with a json body to the following endpoint:
 
 
-```
 ```json
 // POST https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key=WEB_API_KEY 
 {
@@ -41,9 +40,6 @@ Now, to login with our newly created user, we make a POST request with a json bo
      "returnSecureToken": true
  }
 ```
-```
-
-
 Note that you need to fill in the **WEB\_API\_KEY** parameter as well! You can obtain it by clicking the settings gear next to Project Overview. The General tab should open and it should list the Web API Key.
 
 
@@ -51,7 +47,6 @@ If the login is successful you will get a response similar to the following:
 
 
 ```
-```json
 {
   "kind": "identitytoolkit#VerifyPasswordResponse",
   "localId": "drH5pThXcuY1V2w2FSVwlaRZXEN2",
@@ -63,36 +58,24 @@ If the login is successful you will get a response similar to the following:
   "expiresIn": "3600"
 }
 ```
-```
-
 
 In order to make authenticated requests you’ll have to provide the following header to all requests:
 
-
 **Authentication: Bearer ${idToken}**
-
 
 Keep in mind that the idToken expires in 3600 seconds and you’ll need to exchange the refresh token for a new idToken before or after it expires:
 
-
 ```
-```json
 // https://securetoken.googleapis.com/v1/token?key=WEB_API_KEY
 {
   "grant_type": "refresh_token",
   "refresh_token": your_refresh_token
 }
 ```
-```
-
-
 ## Security Rules
-
 
 To secure my database I’ve used the following security rules. The don’t allow deletion and only allow creating, updating and reading documents. Deleting them is forbidden.
 
-
-```
 ```
 rules_version = '2';
 service cloud.firestore {
@@ -105,7 +88,6 @@ service cloud.firestore {
 }
 
 
-```
 ```
 
 
