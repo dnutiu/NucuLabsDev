@@ -46,10 +46,8 @@ But, there’s is a problem. **Apache2** is old, harder to configure, secure and
 The first step I did was to turn off Apache2 and block the web ports via XXX’s cloud firewall. Blocking the ports is important because I don’t want to serve my initial WordPress configuration file as a txt by accident.
 
 
-```
 ```bash
 sudo systemctl stop apache2
-```
 ```
 Next, I’ve installed the necessary dependencies:
 
