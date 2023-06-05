@@ -24,6 +24,7 @@ SSTables are designed to be compact and efficient. They are sorted by key, which
 
 Consider a simple table that contains two columns - "name" and "age". Here's an example of how the data would be stored in an SSTable:
 
+```
 Partition Key: "John"
 ------------------------------
 | Column Name | Column Value |
@@ -39,6 +40,8 @@ Partition Key: "Jane"
 |    name     |     Jane     |
 |     age     |      28      |
 ------------------------------
+```
+
 In this example, the SSTable contains two rows, one for John and one for Jane. Each row contains a partition key and a set of column values. The column names and values are stored as key-value pairs, and are sorted by column name.
 
 SSTables in Cassandra also contain additional metadata to help with efficient reads and writes. For example, each SSTable contains a bloom filter that allows Cassandra to quickly determine whether a key is present in the SSTable or not. Additionally, each SSTable contains an index that allows Cassandra to quickly locate a particular key or range of keys.
