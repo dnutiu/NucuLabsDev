@@ -10,7 +10,6 @@ tags:
 - hugo
 - "static website"
 title: "From Wordpress To Hugo"
-draft: true
 ---
 
 # Introduction
@@ -71,14 +70,15 @@ The content is also static, that means a fast website and easy hosting. 🌥️
 To migrate your blog you'll need to install a plugin called [jekyll-exporter](https://wordpress.org/plugins/jekyll-exporter/).
 It will export your posts into a Jekyll post format, which then can be converted to Hugo format.
 
-I've used the [Jekyll to Hugo](https://dnutiu.github.io/jekyll-to-hugo/) tool to migrate my blog from WordPress to Hugo.
+Then I've used the [Jekyll to Hugo](https://dnutiu.github.io/jekyll-to-hugo/) tool to migrate my blog from WordPress to Hugo.
 
 Since my blog was hosted on WordPress.com and I had the cheaper premium plan
 that did not support plugin installations I had to improvise.
 
-A video tutorial and showcase of the tool is available below:
+Here's a demonstration video:
 
-TODO
+{{< youtube wFkPMxhwoK8 >}}
+---
 
 ### Docker-Compose
 
@@ -126,4 +126,4 @@ upload_max_filesize = 10M
 post_max_size = 10M
 ```
 
-Thanks for reading! 📚
+Thank you for reading and happy blogging! 📚 
