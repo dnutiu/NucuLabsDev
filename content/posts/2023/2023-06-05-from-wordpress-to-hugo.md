@@ -49,7 +49,7 @@ And, if you decided that you'll use the free version of plugins each plugin will
 dashboard in order to *"remind you"* to upgrade 💰. 
 
 Every time I wanted to write a blog post I was greeted with ads and reminded to "upgrade"
-and that was a huge turnoff for me! 🤮
+and that was a turnoff for me.
 
 ![billboards and ads](/hugo-content/2023-05/pexels-vlad-alexandru-popa-1486222.jpg)
 
