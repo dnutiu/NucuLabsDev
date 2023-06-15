@@ -134,10 +134,14 @@ menu:
       name: Books
       url: /books/
       weight: 50
+    - identifier: rss
+      name: RSS Feed
+      url: /rss/
+      weight: 60
     - identifier: newsletter
       name: Newsletter
       url: https://nuculabs.substack.com/
-      weight: 60
+      weight: 70
 # Read: https://github.com/adityatelange/hugo-PaperMod/wiki/FAQs#using-hugos-syntax-highlighter-chroma
 pygmentsUseClasses: true
 markup:
