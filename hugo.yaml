@@ -84,6 +84,8 @@ params:
       url: "https://github.com/dnutiu"
     - name: linkedin
       url: "https://linkedin.com/in/denisnutiu"
+    - name: rss
+      url: "/index.xml"
 
 #  analytics:
 #    google:
