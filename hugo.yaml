@@ -71,7 +71,7 @@ params:
   # home-info mode
   homeInfoParams:
     Title: "Welcome to NucuLabs \U0001F44B"
-    Content: A blog about Programming, Cloud and Engineering! 👨‍🔬
+    Content: A blog about Programming, Cloud and Engineering! 👨‍🔬; (Blogging consistently since 2018)
 
   socialIcons:
     - name: goodreads
