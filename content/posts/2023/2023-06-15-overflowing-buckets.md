@@ -36,19 +36,19 @@ And try it 😄.
 
 I had this problem during a whiteboard interview and I did not manage to solve it, as I was writing
 the class the interviewer steered me in another direction and that threw my thinking off. I'm a big fan of
-Object Oriented design.
+object oriented design.
 
 My time was limited because the statement of the problem was very vague, and most of the time I was trying to
 identify what to solve for.
 
 Anyways, I hope you'll have better luck in whiteboard interview and hopefully you get to do them in your IDE. 
-I've had no problem passing TopTal coding assignments when they let me do it in my IDE.
+I've had no problem passing Toptal coding assignments when they let me do it in my IDE.
 
 The `Run`, `Evaluate`, `Improve` feedback loop is very important for me as a programmer. I work daily in my IDE writing
 hundreds of lines of code, suddenly getting a problem to solve on paper does throw me off. 
 
 Even in complex projects when I want to test my idea I write a simple unit-test, this can be done only if the project 
-is structured well and the code is designed for unit testing, poor code quality and projects are usually testable. 
+is structured well and the code is designed for unit testing. 
 If you want to learn more about unit-testing I cannot recommend this book enough: 
 [Growing Object-Oriented Software, Guided by Tests](https://www.goodreads.com/book/show/4268826-growing-object-oriented-software-guided-by-tests)
 
