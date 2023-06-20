@@ -3,6 +3,7 @@ author: ["Denis Nutiu"]
 categories:
 - "AI"
 - "Python"
+- "Tutorial"
 date: '2023-06-20'
 layout: post
 permalink: /2023/06/20/fast-ai-gpu-support
