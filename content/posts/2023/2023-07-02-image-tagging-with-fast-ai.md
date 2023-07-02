@@ -4,7 +4,7 @@ categories:
 - "AI"
 - "Python"
 - "Tutorial"
-date: '2023-06-'
+date: '2023-07-02'
 layout: post
 tags:
 - python
@@ -12,9 +12,11 @@ tags:
 - ai
 - deep learning
 - fast api
+- onnx
 title: "Image tagging with Deep Learning"
-draft: true
 ---
+
+![image](/hugo-content/2023-07/image-tagger.png)
 
 Hello everyone 👋,
 
@@ -108,15 +110,20 @@ The `learn.fine_tune(3, freeze_epochs=4)` will train the model for 3 epochs and 
 
 # The Results
 
-The results are so-and-so.
+The results are quite good, my dataset consisted of ~7k images and there's room for improvement.
 
+Given the following image, the model will predict it's tags.
 
-Given the following image:
+![image](/hugo-content/2023-07/image-tagger.png)
 
-![image](/hugo-content/2023-06/1.jpg)
+I converted the model into a Pytorch Model and then into an ONNX model. I've used the ONNX Runtime to run the model
+inside a web browser on the client side.
 
-The model predicts the following tags:
+You can use the app here:  https://beautiful-tartufo-6d25b3.netlify.app/
 
-```text
-[]
-```
+# Conclusion
+
+Training a model with FastAI is quite easy and the results are quite good. You can also convert it to Pytorch and then
+to ONNX Runtime in order to run it on a mobile device or on a web browser. So far It's been really fun.
+
+Thank you for reading! 🙏
