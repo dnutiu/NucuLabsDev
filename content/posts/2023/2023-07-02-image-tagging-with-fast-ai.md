@@ -20,12 +20,12 @@ title: "Image tagging with Deep Learning"
 
 Hello everyone 👋,
 
-I've been playing with FastAI and deep learning for a week or so and I've decided the combine my passion for software
+I've been playing with FastAI and deep learning for a week or so and I've decided to combine my passion for software
 with my passion for photography. I'm working on an app or maybe a library that allows you to generate tags for a photo.
 For an amateur photographer like me it's quite useful as I don't always have inspiration to write tags for my photos and sometimes
 the tags I write are inconsistent.
 
-I already wrote an image scrapper using Python and I'm building my dataset as we speak. For now since I don't have any other
+I already wrote an image scrapper using Python, and I'm building my dataset as we speak. For now since I don't have any other
 knowledge with another library I'm using FastAI for the image classification. I'm planning to use a different library when
 I'll learn more about deep learning.
 
