@@ -12,18 +12,12 @@ and software development ✨.
 
 During my day to day work I develop software in Python, Go, JavaScript and sometimes Java. 🪛
 
-I have worked on CLIs, microservices, back-end web applications, 
-Restful APIs, gRPC APIs, Apache Flink jobs and single page web applications with Vue.JS.
+I have worked on CLIs, microservices, back-end web applications, Restful APIs, gRPC APIs,
+Apache Flink jobs and single page web applications with Vue.JS.
 
 Kubernetes is also a technology I enjoy working with.
-I’ve configured a microk8s Kubernetes cluster and deployed 
-my applications along with their dependencies, which I manage using helm and Kubernetes operators. 🚀
-
-
-At home I use Linux & Windows and at the job 
-I currently use a MacOS system, previously I’ve used Linux. 👾
-
-I like writing tests and documentation for the stuff I’m building 😄.
+I’ve configured a microk8s Kubernetes cluster and deployed custom applications along with their dependencies, 
+which are managed using helm and Kubernetes operators. 🚀
 
 You can reach me on 📫 [LinkedIn](https://www.linkedin.com/in/denisnutiu/).
 
