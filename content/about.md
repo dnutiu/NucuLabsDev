@@ -7,21 +7,15 @@ author: "Denis Nutiu"
 
 🧑‍💻
 
-I’m Denis, a programmer living in 🇷🇴 Romania. I’m passionate about cloud computing 
+I’m Denis, a programmer living in Romania. I’m passionate about cloud computing 
 and software development ✨.
 
-During my day to day work I develop software in Python, Go, JavaScript and sometimes Java. 🪛
+During my day-to-day work, I develop backend services, CLIs and web applications in Python, Go and other languages
+depending on the project.
 
-I have worked on CLIs, microservices, back-end web applications, Restful APIs, gRPC APIs,
-Apache Flink jobs and single page web applications with Vue.JS.
-
-Kubernetes is also a technology I enjoy working with.
-I’ve configured a microk8s Kubernetes cluster and deployed custom applications along with their dependencies, 
-which are managed using helm and Kubernetes operators. 🚀
+Kubernetes is my tool of choice for deploying and managing applications in the cloud.
 
 You can reach me on 📫 [LinkedIn](https://www.linkedin.com/in/denisnutiu/).
-
-I also run a personal blog on https://nuculabs.dev (this blog) in which I write various technical posts 💬.
 
 ### Contact Information
 Feel free to contact me at:
