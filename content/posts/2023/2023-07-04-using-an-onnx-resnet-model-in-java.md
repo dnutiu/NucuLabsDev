@@ -106,7 +106,7 @@ The code that does this is the following:
 
             ArrayList<String> predictions = new ArrayList<String>();
 
-            // sort buffer
+            // filter buffer by treashold
             for (int i = 0; i < floatBuffer[0].length; i++) {
                 if (floatBuffer[0][i] > -0.5) {
                     predictions.add(String.format("%s: %f - %s", i, floatBuffer[0][i], Categories.CATEGORIES.get(i)));
@@ -171,12 +171,11 @@ The process image code does the following things:
 
             // Read image
             File imageFile = new File(imagePath);
-            BufferedImage bufferedImage = ImageIO.read(imageFile);
             var image = ImageIO.read(imageFile);
 
             // crop image
-            int width = bufferedImage.getWidth();
-            int height = bufferedImage.getHeight();
+            int width = image.getWidth();
+            int height = image.getHeight();
             int startX = 0;
             int startY = 0;
             if (width > height) {
@@ -256,11 +255,10 @@ public class Program {
             // Read image
             File imageFile = new File(imagePath);
             BufferedImage bufferedImage = ImageIO.read(imageFile);
-            var image = ImageIO.read(imageFile);
 
             // Crop image
-            int width = bufferedImage.getWidth();
-            int height = bufferedImage.getHeight();
+            int width = image.getWidth();
+            int height = image.getHeight();
             int startX = 0;
             int startY = 0;
             if (width > height) {
@@ -270,7 +268,7 @@ public class Program {
                 startY = (height - width) / 2;
                 height = width;
             }
-            image = image.getSubimage(startX, startY, width, height);
+            var image = image.getSubimage(startX, startY, width, height);
             // ImageIO.write(image, "jpg", new File("C:\\Users\\nutiu\\IdeaProjects\\untitled\\src\\test\\java\\main\\resources\\debug.jpg"));
 
             // Resize image
@@ -327,7 +325,7 @@ public class Program {
 
             ArrayList<String> predictions = new ArrayList<String>();
 
-            // sort buffer
+            // filter buffer by treashold
             for (int i = 0; i < floatBuffer[0].length; i++) {
                 if (floatBuffer[0][i] > -0.5) {
                     predictions.add(String.format("%s: %f - %s", i, floatBuffer[0][i], Categories.CATEGORIES.get(i)));
