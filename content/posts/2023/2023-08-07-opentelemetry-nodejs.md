@@ -393,7 +393,7 @@ And that's it! You now have a working OpenTelemetry setup with Tempo and Grafana
 
 OpenTelemetry combined with Tempo are powerful tools for monitoring and troubleshooting your complex systems.
 
-However, the setup can be quite complex. If you want to get started quickly.
+However, the setup can be quite complex if you're not familiar with the tools.
 
 Thanks for reading! 📚
 
