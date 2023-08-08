@@ -23,6 +23,5 @@ Feel free to contact me at:
 - [Github](https://github.com/dnutiu)
 - [LinkedIn](https://linkedin.com/in/denisnutiu)
 - [StackOverflow](https://stackoverflow.com/users/4092044/denis-nutiu)
-- [YouTube](https://www.youtube.com/@nuculabs)
 
 ![nuculabs dev banner](/images/blog-banner.webp)
