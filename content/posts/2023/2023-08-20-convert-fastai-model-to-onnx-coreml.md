@@ -91,23 +91,41 @@ import coremltools as ct
 model_name = "resnet151"
 model_path = f"./{model_name}.pth"
 
-model = torch.load(model_path, map_location=torch.device('cpu'))
+model = torch.load(model_path, map_location=torch.device("cpu"))
 model.eval()
 
 # Trace the model with random data.
 dummy_input = torch.rand(1, 3, 224, 224)
 traced_model = torch.jit.trace(model, dummy_input)
 
+# Load the class labels.
+class_labels = []
+with open("categories.txt", "r") as f:
+    class_labels = [line.strip() for line in f.readlines()]
+
 # Using image_input in the inputs parameter:
 # Convert to Core ML program using the Unified Conversion API.
+scale = 1 / (0.226 * 255.0)
+bias = [-0.485 / (0.229), -0.456 / (0.224), -0.406 / (0.225)]
+
 model = ct.convert(
     traced_model,
     convert_to="mlprogram",
-    inputs=[ct.TensorType(shape=dummy_input.shape)]
+    inputs=[
+        ct.ImageType(
+            name="input_image",
+            shape=(1, 3, 224, 224),
+            color_layout=ct.colorlayout.RGB,
+            scale=scale,
+            bias=bias,
+        )
+    ],
+    classifier_config=ct.ClassifierConfig(class_labels)
 )
 
 # Save the converted model.
 model.save(f"{model_name}.mlpackage")
+
 ```
 
 3. Run the script:
