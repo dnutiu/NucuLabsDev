@@ -6,6 +6,7 @@ categories:
   - "Web Development"
   - "Programming"
   - "Tutorial"
+permalink: /2023/08/07/tracing-nodejs-apis-with-opentelemetry/
 tags:
   - javascript
   - programming

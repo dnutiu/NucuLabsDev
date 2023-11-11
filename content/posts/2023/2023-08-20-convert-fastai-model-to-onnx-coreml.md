@@ -5,6 +5,7 @@ date: '2023-08-20'
 categories:
   - "AI"
   - "Tutorial"
+permalink: /2023/08/20/convert-fastai-model-to-onnx-coreml/
 tags:
   - fast ai
   - onnx

@@ -5,6 +5,7 @@ date: '2023-09-12'
 categories:
   - "AI"
   - "Programming"
+permalink: /2023/09/12/image-tagging-showcase/
 tags:
   - fast ai
   - programming

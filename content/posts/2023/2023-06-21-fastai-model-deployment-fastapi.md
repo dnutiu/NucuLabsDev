@@ -13,6 +13,7 @@ tags:
 - deep learning
 - fast api
 title: "Deploy a FastAI model with FastAPI"
+permalink: /2023/06/21/fastai-model-deployment-fastapi/
 ---
 
 Hello everyone 👋,

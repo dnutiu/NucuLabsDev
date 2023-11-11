@@ -6,6 +6,7 @@ categories:
 - "AI"
 - "Programming"
 - "Tutorial"
+permalink: /2023/07/04/using-an-onnx-resnet-model-in-java/
 tags:
 - java
 - programming

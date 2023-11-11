@@ -6,6 +6,7 @@ categories:
 - "Tutorial"
 date: '2023-07-02'
 layout: post
+permalink: /2023/07/02/image-tagging-with-fast-ai/
 tags:
 - python
 - programming
