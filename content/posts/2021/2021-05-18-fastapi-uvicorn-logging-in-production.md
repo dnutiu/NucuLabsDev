@@ -167,8 +167,6 @@ We should see the Uvicorn access logs printed in the console 🦄
 Thanks for reading! 📚
 
 
-PS: If you want to support this blog, I’ve made a[ Udemy course on FastAPI](https://www.udemy.com/course/build-a-movie-tracking-api-with-fastapi-and-python/?referralCode=47430716975684E04F85). Purchasing it through my referral link will give me 96% of the sale amount. Thanks!
-
 
 ### requirements.txt
 
