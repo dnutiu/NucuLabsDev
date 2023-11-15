@@ -3,6 +3,7 @@ author: "Denis Nu\u021Biu"
 categories:
 - Design Pattern
 - Programming
+- Featured
 - Tutorial
 date: '2021-03-07T15:17:04+00:00'
 guid: https://nuculabs.wordpress.com/?p=455
