@@ -6,6 +6,7 @@ categories:
   - "Distributed Systems"
   - "Web Development"
   - "Programming"
+  - "Cloud"
 permalink: /2023/11/14/idempotency-in-your-api/
 tags:
   - programming
