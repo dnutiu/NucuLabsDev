@@ -78,11 +78,13 @@ I've also made a [video](https://youtu.be/wFkPMxhwoK8) that showcases the tool.
 
 **Story**: 
 
-This project acts as an integration bridge between [Loki](https://grafana.com/oss/loki/) and [Apache Kafka](https://kafka.apache.org/).
+Acts as an integration bridge between [Loki](https://grafana.com/oss/loki/) and [Apache Kafka](https://kafka.apache.org/).
 
 We needed to move data from Apache Kafka into Loki, and this project streams the data from Kafka to Loki. 
 
 Once deployed, it will consume JSON data from a Kafka topic, flatten it and insert it into Loki.
+
+If you're looking to do this in production I would recommend using [Vector.dev](https://vector.dev/) instead.
 
 **Tech Stack**: Go, Docker, Kubernetes, Loki, Apache Kafka
 
