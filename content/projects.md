@@ -37,7 +37,9 @@ Projects that I've done out of passion during my free time.
 
 **When**: Jul 2023
 
-**Story**: As an amateur photographer 📸 that sometimes uploads photos online on [Unsplash](https://unsplash.com/@ndcphoto),
+**Story**: 
+
+As an amateur photographer 📸 that sometimes uploads photos online on [Unsplash](https://unsplash.com/@ndcphoto),
 I find it boring and tedious to find tags for the images.
 
 And while I was working on the [Practical Deep Learning](https://course.fast.ai/) course, I learned to train and make
@@ -57,7 +59,9 @@ detection using Python. I haven't published the scrapper code yet.
 
 **When**: May 2023
 
-**Story**: This is a niche tool that I've built to move my blog from WordPress to a 
+**Story**: 
+
+This is a niche tool that I've built to move my blog from WordPress to a 
 self-hosted static site powered by Hugo on GitHub pages.
 
 The initial version was written in 2 hours while I was commuting by train in Romania. It's far from perfect but it worked
@@ -75,7 +79,9 @@ I've also made a [video](https://youtu.be/wFkPMxhwoK8) that showcases the tool.
 
 **When**: Apr 2022
 
-**Story**: This project acts as an integration bridge between [Loki](https://grafana.com/oss/loki/) and [Apache Kafka](https://kafka.apache.org/).
+**Story**: 
+
+This project acts as an integration bridge between [Loki](https://grafana.com/oss/loki/) and [Apache Kafka](https://kafka.apache.org/).
 
 We needed to move data from Apache Kafka into Loki, and this project streams the data from Kafka to Loki. 
 
@@ -88,7 +94,9 @@ Once deployed, it will consume JSON data from a Kafka topic, flatten it and inse
 
 **When**: Apr 2022
 
-**Story**: Images contain metadata information such as GPS Data and the device used to take the picture. 
+**Story**: 
+
+Images contain metadata information such as GPS Data and the device used to take the picture. 
 
 Since I enjoy posting pictures online, I developed this command line application to remove the metadata from images 
 so that they can be safely uploaded online.
@@ -102,7 +110,9 @@ This project was a nice learning experience with C#.
 
 **When**: Feb 2022
 
-**Story**: [Bme680](https://shop.pimoroni.com/products/bme680-breakout?variant=12491552129107) is an air quality sensor developed by Bosh.
+**Story**: 
+
+[Bme680](https://shop.pimoroni.com/products/bme680-breakout?variant=12491552129107) is an air quality sensor developed by Bosh.
 
 I used it to measure my home's temperature and humidity from my iPhone. This project turned my [Raspberry Pi](https://www.raspberrypi.com/)
 into a [HomeKit](https://www.apple.com/home-app/) accessory, and because of that I can always view the temperature 
@@ -119,7 +129,9 @@ Since the project runs on Raspberry Pi, I've installed a Grafana instance to vis
 
 **When**: Apr 2021
 
-**Story**: PMS comes from particulate matter sensor and [PMS5003](https://shop.pimoroni.com/products/pms5003-particulate-matter-sensor-with-cable?variant=29075640352851)
+**Story**: 
+
+PMS comes from particulate matter sensor and [PMS5003](https://shop.pimoroni.com/products/pms5003-particulate-matter-sensor-with-cable?variant=29075640352851)
 is a relatively economical sensor for measuring air quality.
 
 I have implemented an intuitive library in C# to read data from the sensor using the [serial bus](https://en.wikipedia.org/wiki/Serial_communication).
@@ -131,7 +143,9 @@ I have implemented an intuitive library in C# to read data from the sensor using
 
 **When**: Nov 2019 - May 2021
 
-**Story**: Retroactiune is a web application built with .NET Core, it is an end-to-end system for managing anonymous feedback. 
+**Story**: 
+
+Retroactiune is a web application built with .NET Core, it is an end-to-end system for managing anonymous feedback. 
 
 The goal of this project was to enable its users to collect anonymous feedback. 
 
@@ -149,7 +163,9 @@ It currently lacks a user interface and only APIs are implemented.
 
 **When**: Nov 2019 - May 2021
 
-**Story**: This was an odd project, with the release of [.NET IoT](https://dotnet.microsoft.com/en-us/apps/iot) I wanted
+**Story**: 
+
+This was an odd project, with the release of [.NET IoT](https://dotnet.microsoft.com/en-us/apps/iot) I wanted
 to implement [my friend's project](https://github.com/vnemes/PiCar) with using dotnet on a Raspberry Pi, then I dropped
 the `car` part and focused entirely on a platform for reading and visualizing sensor data.
 
@@ -170,7 +186,9 @@ To visualize sensor data I've developed an [Android application](https://github.
 
 **When**: Jun 2019 - Sep 2019
 
-**Story**: I've worked on this game with my friends, we built it to teach us Unity. It was inspired by the popular
+**Story**: 
+
+I've worked on this game with my friends, we built it to teach us Unity. It was inspired by the popular
 [Dyna Blaster](https://en.wikipedia.org/wiki/Dynablaster) game. 
 
 Out goal was to become game developers and start a game studio 🚀. 
@@ -196,7 +214,9 @@ We also got an Android application published on the Google Play but we didn't re
 
 **When**: *Approximately in January -2015.*
 
-**Story**: As I was learning Git, GitHub and Web Development I have developed a small Hangman game using JavaScript. 
+**Story**: 
+
+As I was learning Git, GitHub and Web Development I have developed a small Hangman game using JavaScript. 
 
 It featured a full layout for desktop web browsers and a mobile layout. It also played different sounds when the player
 lost or won the game.
@@ -213,7 +233,9 @@ Here are a few examples of projects I've successfully completed as part of my un
 
 **When**: Oct 2018 - Oct 2018
 
-**Story**: This was the final project for my **Computer Networks** class. It is a simple and concurrent file transfer server.
+**Story**: 
+
+This was the final project for my **Computer Networks** class. It is a simple and concurrent file transfer server.
 A user would interact with it using the `nc` (netcat) unix command line utility to upload and download files from the server.
 
 While working on this project, I also had the opportunity to debug it using [WireShark](https://www.wireshark.org/), and
@@ -226,7 +248,9 @@ I've also had TravisCI (Continuous Integration) set up for running unit-tests.
 
 **When**: Apr 2017 - Apr 2017
 
-**Story**: This project was done for the **Computer Organization** class. We were a small team of four students, 
+**Story**: 
+
+This project was done for the **Computer Organization** class. We were a small team of four students, 
 and the goal was to build a benchmarking tool. I was in charge of building the website and server for displaying the 
 benchmark results in a web browser. My teammates were responsible for the benchmarking Desktop application and designed benchmarks scenarios. 
 
