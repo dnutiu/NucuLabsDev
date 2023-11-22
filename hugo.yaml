@@ -125,6 +125,10 @@ menu:
       name: Search
       url: /search/
       weight: 20
+    - identifier: projects
+      name: Projects
+      url: /projects/
+      weight: 21
     - identifier: categories
       name: Categories
       url: /categories/
@@ -140,11 +144,11 @@ menu:
     - identifier: rss
       name: RSS Feed
       url: /rss/
-      weight: 60
+      weight: 70
     - identifier: newsletter
       name: Newsletter
       url: https://nuculabs.substack.com/
-      weight: 70
+      weight: 80
 # Read: https://github.com/adityatelange/hugo-PaperMod/wiki/FAQs#using-hugos-syntax-highlighter-chroma
 pygmentsUseClasses: true
 markup:
