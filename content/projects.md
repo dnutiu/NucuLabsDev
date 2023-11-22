@@ -40,15 +40,15 @@ Projects that I've done out of passion during my free time.
 **Story**: 
 
 As an amateur photographer 📸 that sometimes uploads photos online on [Unsplash](https://unsplash.com/@ndcphoto),
-I find it boring and tedious to find tags for the images.
+I find it boring and tedious to tag my images.
 
-And while I was working on the [Practical Deep Learning](https://course.fast.ai/) course, I learned to train and make
-deep learning models. 
+I learned to train and make deep learning models from [Practical Deep Learning](https://course.fast.ai/) course. 
 
 Using this new knowledge, I built this **cross-platform** Desktop tool with C# and [Avalonia UI](https://avaloniaui.net/).
 
-To train my model, I've used Python and [fast.ai](https://www.fast.ai/) and to get training data, I've built a performant web scrapper that evades
-detection using Python. I haven't published the scrapper code yet.
+To train my model, I've used Python and [fast.ai](https://www.fast.ai/) and to get training data, 
+I've built a performant web scrapper that evades detection using Python.
+I haven't published the scrapper code yet.
 
 ![Image Tagger](https://github.com/dnutiu/image-tagging/raw/master/docs/preview.png)
 
