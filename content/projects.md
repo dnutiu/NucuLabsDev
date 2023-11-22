@@ -5,11 +5,6 @@ author: "Denis Nutiu"
 showtoc: true
 ---
 
-Hello there! 👋
-
-This page servers as a quick showcase of my projects that I have done them in my free time for fun, university 
-or to learn new skills.
-
 I'm a builder at heart, and I like building things. 😄
 
 ## NucuLabs.Dev
@@ -17,11 +12,13 @@ I'm a builder at heart, and I like building things. 😄
 
 **When**: Feb 2018 - *Present*
 
-**Story**: This is my personal blog that I've started to improve my writing skill and share my knowledge with the world.
+**Story**: 
+
+This is my personal blog that I've started to improve my writing skill and share my knowledge with the world.
 
 I wrote my first article [How to get started with FreeRTOS and ESP8266](https://nuculabs.wordpress.com/2018/02/03/how-to-get-started-with-freertos-and-esp8266/#more-24)
-initially on my wordpress-based blog, and since then I moved the blog to a self-hosted static site generator 
-[Hugo](https://gohugo.io/) based blog deployed on GitHub Pages. 
+initially on my wordpress-based blog, and since then I moved the blog to a self-hosted static site generator powered by
+[Hugo](https://gohugo.io/) on GitHub Pages. 
 
 Some of my articles were also published by [FreeCodeCamp](https://www.freecodecamp.org/news/how-to-get-started-with-freertos-and-esp8266-7a16035ddd71/). 🎉
 
@@ -30,7 +27,7 @@ Some of my articles were also published by [FreeCodeCamp](https://www.freecodeca
 
 ## Hobby Projects
 
-Projects that I've done out of passion during my free time. 
+Projects that I've done out of passion for software engineering during my free time 🕑. 
 
 ---
 ### Image Tagger ([GitHub](https://github.com/dnutiu/image-tagging))
