@@ -285,6 +285,8 @@ I used MySQL and [deployed](https://github.com/dnutiu/benchmark-scoreboard/wiki/
 
 ## Other Projects
 
+Other and miscellaneous projects 🐈‍⬛.
+
 ---
 
 ### FastAPI Udemy Course
