@@ -9,41 +9,43 @@ I'm a builder at heart, and I like building things. 😄
 
 ## NucuLabs.Dev
 
-
 **When**: Feb 2018 - *Present*
 
-**Story**: 
+**Story**:
 
 This is my personal blog that I've started to improve my writing skill and share my knowledge with the world.
 
-I wrote my first article [How to get started with FreeRTOS and ESP8266](https://nuculabs.wordpress.com/2018/02/03/how-to-get-started-with-freertos-and-esp8266/#more-24)
+I wrote my first
+article [How to get started with FreeRTOS and ESP8266](https://nuculabs.wordpress.com/2018/02/03/how-to-get-started-with-freertos-and-esp8266/#more-24)
 initially on my wordpress-based blog, and since then I moved the blog to a self-hosted static site generator powered by
-[Hugo](https://gohugo.io/) on GitHub Pages. 
+[Hugo](https://gohugo.io/) on GitHub Pages.
 
-Some of my articles were also published by [FreeCodeCamp](https://www.freecodecamp.org/news/how-to-get-started-with-freertos-and-esp8266-7a16035ddd71/). 🎉
+Some of my articles were also published
+by [FreeCodeCamp](https://www.freecodecamp.org/news/how-to-get-started-with-freertos-and-esp8266-7a16035ddd71/). 🎉
 
 **Tech Stack**: Markdown, Hugo, Github Pages
 
-
 ## Hobby Projects
 
-Projects that I've done out of passion for software engineering during my free time 🕑. 
+Projects that I've done out of passion for software engineering during my free time 🕑.
 
 ---
+
 ### Image Tagger ([GitHub](https://github.com/dnutiu/image-tagging))
 
 **When**: Jul 2023
 
-**Story**: 
+**Story**:
 
 As an amateur photographer 📸 that sometimes uploads photos online on [Unsplash](https://unsplash.com/@ndcphoto),
 I find it boring and tedious to tag my images.
 
-I learned to train and make deep learning models from [Practical Deep Learning](https://course.fast.ai/) course. 
+I learned to train and make deep learning models from [Practical Deep Learning](https://course.fast.ai/) course.
 
-Using this new knowledge, I built this **cross-platform** Desktop tool with C# and [Avalonia UI](https://avaloniaui.net/).
+Using this new knowledge, I built this **cross-platform** Desktop tool with C#
+and [Avalonia UI](https://avaloniaui.net/).
 
-To train my model, I've used Python and [fast.ai](https://www.fast.ai/) and to get training data, 
+To train my model, I've used Python and [fast.ai](https://www.fast.ai/) and to get training data,
 I've built a performant web scrapper that evades detection using Python.
 I haven't published the scrapper code yet.
 
@@ -52,19 +54,21 @@ I haven't published the scrapper code yet.
 **Tech Stack**: C#, Python, Deep Learning
 
 ---
+
 ### Jekyll To Hugo ([GitHub](https://github.com/dnutiu/jekyll-to-hugo))
 
 **When**: May 2023
 
-**Story**: 
+**Story**:
 
-This is a niche tool that I've built to move my blog from WordPress to a 
+This is a niche tool that I've built to move my blog from WordPress to a
 self-hosted static site powered by Hugo on GitHub pages.
 
-The initial version was written in 2 hours while I was commuting by train in Romania. It's far from perfect but it worked
+The initial version was written in 2 hours while I was commuting by train in Romania. It's far from perfect but it
+worked
 well enough for my use case.
 
-It's published on pipy as a [Python package](https://pypi.org/project/jekyll-to-hugo/0.0.9/) and, 
+It's published on pipy as a [Python package](https://pypi.org/project/jekyll-to-hugo/0.0.9/) and,
 the documentation is published on [GitHub pages](https://dnutiu.github.io/jekyll-to-hugo/).
 
 I've also made a [video](https://youtu.be/wFkPMxhwoK8) that showcases the tool.
@@ -72,30 +76,33 @@ I've also made a [video](https://youtu.be/wFkPMxhwoK8) that showcases the tool.
 **Tech Stack**: Python
 
 ---
+
 ### Speedy ([GitHub](https://github.com/dnutiu/speedy))
 
 **When**: Apr 2022
 
-**Story**: 
+**Story**:
 
-Acts as an integration bridge between [Loki](https://grafana.com/oss/loki/) and [Apache Kafka](https://kafka.apache.org/).
+Acts as an integration bridge between [Loki](https://grafana.com/oss/loki/)
+and [Apache Kafka](https://kafka.apache.org/).
 
-We needed to move data from Apache Kafka into Loki, and this project streams the data from Kafka to Loki. 
+We needed to move data from Apache Kafka into Loki, and this project streams the data from Kafka to Loki.
 
 Once deployed, it will consume JSON data from a Kafka topic, flatten it and insert it into Loki.
 
 **Tech Stack**: Go, Docker, Kubernetes, Loki, Apache Kafka
 
 ---
+
 ### Image Metadata Remover ([GitHub](https://github.com/dnutiu/ImgMetadataRemover))
 
 **When**: Apr 2022
 
-**Story**: 
+**Story**:
 
-Images contain metadata information such as GPS Data and the device used to take the picture. 
+Images contain metadata information such as GPS Data and the device used to take the picture.
 
-Since I enjoy posting pictures online, I developed this command line application to remove the metadata from images 
+Since I enjoy posting pictures online, I developed this command line application to remove the metadata from images
 so that they can be safely uploaded online.
 
 This project was a nice learning experience with C#.
@@ -103,50 +110,59 @@ This project was a nice learning experience with C#.
 **Tech Stack**: C#
 
 ---
+
 ### Bme680 HomeKit ([GitHub](https://github.com/dnutiu/bme680-homekit))
 
 **When**: Feb 2022
 
-**Story**: 
+**Story**:
 
-[Bme680](https://shop.pimoroni.com/products/bme680-breakout?variant=12491552129107) is an air quality sensor developed by Bosh.
+[Bme680](https://shop.pimoroni.com/products/bme680-breakout?variant=12491552129107) is an air quality sensor developed
+by Bosh.
 
-I used it to measure my home's temperature and humidity from my iPhone. This project turned my [Raspberry Pi](https://www.raspberrypi.com/)
-into a [HomeKit](https://www.apple.com/home-app/) accessory, and because of that I can always view the temperature 
+I used it to measure my home's temperature and humidity from my iPhone. This project turned
+my [Raspberry Pi](https://www.raspberrypi.com/)
+into a [HomeKit](https://www.apple.com/home-app/) accessory, and because of that I can always view the temperature
 on my phone even when I'm not at home, thanks to Apple's [home hub](https://support.apple.com/en-us/HT207057) features.
 
-Since the project runs on Raspberry Pi, I've installed a Grafana instance to visualize the historical data from my computer.
+Since the project runs on Raspberry Pi, I've installed a Grafana instance to visualize the historical data from my
+computer.
 
 ![Grafana](https://github.com/dnutiu/bme680-homekit/blob/master/docs/grafana_dashboard.png?raw=true)
 
 **Tech Stack**: Python, Linux, Raspberry Pi
 
 ---
+
 ### Library for PMS5003 ([GitHub](https://github.com/dnutiu/pms5003))
 
 **When**: Apr 2021
 
-**Story**: 
+**Story**:
 
-PMS comes from particulate matter sensor and [PMS5003](https://shop.pimoroni.com/products/pms5003-particulate-matter-sensor-with-cable?variant=29075640352851)
+PMS comes from particulate matter sensor
+and [PMS5003](https://shop.pimoroni.com/products/pms5003-particulate-matter-sensor-with-cable?variant=29075640352851)
 is a relatively economical sensor for measuring air quality.
 
-I have implemented an intuitive library in C# to read data from the sensor using the [serial bus](https://en.wikipedia.org/wiki/Serial_communication).
+I have implemented an intuitive library in C# to read data from the sensor using
+the [serial bus](https://en.wikipedia.org/wiki/Serial_communication).
 
 **Tech Stack**: C#
 
 ---
+
 ### Retroactiune ([GitHub](https://github.com/dnutiu/retroactiune))
 
 **When**: Nov 2019 - May 2021
 
-**Story**: 
+**Story**:
 
-Retroactiune is a web application built with .NET Core, it is an end-to-end system for managing anonymous feedback. 
+Retroactiune is a web application built with .NET Core, it is an end-to-end system for managing anonymous feedback.
 
-The goal of this project was to enable its users to collect anonymous feedback. 
+The goal of this project was to enable its users to collect anonymous feedback.
 
-Let's say you are a teacher and want to collect feedback for your course.  You would generate a set of **tokens**, then give them to your students.
+Let's say you are a teacher and want to collect feedback for your course. You would generate a set of **tokens**, then
+give them to your students.
 A student can use a token to leave feedback for your course.
 
 It currently lacks a user interface and only APIs are implemented.
@@ -156,48 +172,54 @@ It currently lacks a user interface and only APIs are implemented.
 ![Retroactiune high level overview](https://github.com/dnutiu/retroactiune/raw/main/docs/deploy_architecture.png)
 
 ---
+
 ### Nucu Car ([GitHub](https://github.com/dnutiu/NucuCar/tree/master))
 
 **When**: Nov 2019 - May 2021
 
-**Story**: 
+**Story**:
 
 This was an odd project, with the release of [.NET IoT](https://dotnet.microsoft.com/en-us/apps/iot) I wanted
 to implement [my friend's project](https://github.com/vnemes/PiCar) with using dotnet on a Raspberry Pi, then I dropped
 the `car` part and focused entirely on a platform for reading and visualizing sensor data.
 
-I've developed the entire project using C#, it featured a telemetry module that collected data from sensors and published it on Microsoft Azure's [IoT Hub](https://azure.microsoft.com/en-us/products/iot-hub). 
+I've developed the entire project using C#, it featured a telemetry module that collected data from sensors and
+published it on Microsoft Azure's [IoT Hub](https://azure.microsoft.com/en-us/products/iot-hub).
 
-A [gRPC](https://grpc.io/) (Remote Procedure Call) server for exposing data to local clients, a [circuit diagram](https://github.com/dnutiu/NucuCar/tree/master/NucuCar.Sensors).
+A [gRPC](https://grpc.io/) (Remote Procedure Call) server for exposing data to local clients,
+a [circuit diagram](https://github.com/dnutiu/NucuCar/tree/master/NucuCar.Sensors).
 
 It was fun cross-compiling the project for ARM.
 
-To visualize sensor data I've developed an [Android application](https://github.com/dnutiu/NucuCar/tree/master/NucuHub.Android).
+To visualize sensor data I've developed
+an [Android application](https://github.com/dnutiu/NucuCar/tree/master/NucuHub.Android).
 
 **Tech Stack**: C#, Microsoft Azure, Linux, Raspberry PI
 
 ![Android app](https://github.com/dnutiu/NucuCar/raw/master/Docs/images/nucucar_android.png)
 
 ---
+
 ### Snowpiercer Game ([GitHub](https://github.com/dnutiu/projekt-bombs))
 
 **When**: Jun 2019 - Sep 2019
 
-**Story**: 
+**Story**:
 
 I've worked on this game with my friends, we built it to teach us Unity. It was inspired by the popular
-[Dyna Blaster](https://en.wikipedia.org/wiki/Dynablaster) game. 
+[Dyna Blaster](https://en.wikipedia.org/wiki/Dynablaster) game.
 
-Out goal was to become game developers and start a game studio 🚀. 
+Out goal was to become game developers and start a game studio 🚀.
 Turns up game development is way harder that we thought, 😅 and the project remained unfinished 💥.
 
 If you're curious about this game you can play it in your [web browser](https://dnutiu.itch.io/snowpiercer-isog).
 
-We also got an Android application published on the Google Play but we didn't release it to the public. 
+We also got an Android application published on the Google Play but we didn't release it to the public.
 
 **Tech Stack**: Unity, C#
 
 ---
+
 ### Rock Paper Scissors ([GitHub](https://github.com/dnutiu/js-rockpaperscissors))
 
 **When**: **When**: *Approximately in August -2015.*
@@ -207,13 +229,14 @@ We also got an Android application published on the Google Play but we didn't re
 **Tech Stack**: JavaScript, HTML, CSS, jQuery
 
 ---
+
 ### Hangman ([Github](https://github.com/dnutiu/ro-hangman))
 
 **When**: *Approximately in January -2015.*
 
-**Story**: 
+**Story**:
 
-As I was learning Git, GitHub and Web Development I have developed a small Hangman game using JavaScript. 
+As I was learning Git, GitHub and Web Development I have developed a small Hangman game using JavaScript.
 
 It featured a full layout for desktop web browsers and a mobile layout. It also played different sounds when the player
 lost or won the game.
@@ -224,16 +247,18 @@ lost or won the game.
 
 ## University Projects
 
-Here are a few examples of projects I've successfully completed as part of my university coursework at [UPT](https://ac.upt.ro/en/).
+Here are a few examples of projects I've successfully completed as part of my university coursework
+at [UPT](https://ac.upt.ro/en/).
 
 ### simplFT ([Github](https://github.com/dnutiu/simplFT))
 
 **When**: Oct 2018 - Oct 2018
 
-**Story**: 
+**Story**:
 
 This was the final project for my **Computer Networks** class. It is a simple and concurrent file transfer server.
-A user would interact with it using the `nc` (netcat) unix command line utility to upload and download files from the server.
+A user would interact with it using the `nc` (netcat) unix command line utility to upload and download files from the
+server.
 
 While working on this project, I also had the opportunity to debug it using [WireShark](https://www.wireshark.org/), and
 I've also had TravisCI (Continuous Integration) set up for running unit-tests.
@@ -241,17 +266,47 @@ I've also had TravisCI (Continuous Integration) set up for running unit-tests.
 **Tech Stack**: Go, Docker
 
 ---
+
 ### benchmark-scoreboard ([Github](https://github.com/dnutiu/benchmark-scoreboard))
 
 **When**: Apr 2017 - Apr 2017
 
-**Story**: 
+**Story**:
 
-This project was done for the **Computer Organization** class. We were a small team of four students, 
-and the goal was to build a benchmarking tool. I was in charge of building the website and server for displaying the 
-benchmark results in a web browser. My teammates were responsible for the benchmarking Desktop application and designed benchmarks scenarios. 
+This project was done for the **Computer Organization** class. We were a small team of four students,
+and the goal was to build a benchmarking tool. I was in charge of building the website and server for displaying the
+benchmark results in a web browser. My teammates were responsible for the benchmarking Desktop application and designed
+benchmarks scenarios.
 
-I used Python and Flask for the backend server and Twitter Bootstrap for the UI. For the database, 
+I used Python and Flask for the backend server and Twitter Bootstrap for the UI. For the database,
 I used MySQL and [deployed](https://github.com/dnutiu/benchmark-scoreboard/wiki/Deployment) the backend on a Linux VPS.
 
 **Tech Stack**: Python, Flask, Linux
+
+## Other Projects
+
+---
+
+### FastAPI Udemy Course
+
+**When**: Nov 2022
+
+**Story**:
+
+I've created a **my first** course on Udemy for learning FastAPI.
+It's a hands-on course that teaches you how to build a REST API.
+
+It generated 1K$ revenue over a period of 6 months.
+Then I took the course down due to not having enough time to keep up with the framework updates
+as I was the sole person developing the course and editing the videos. 
+Financially (compared to my full time Software Engineering job), it wouldn't make much sense either.
+
+Regarding a few negative reviews, what I learned is to develop a hard skin, ignore them, and persist with your idea 😄.
+You can't please everybody when you post content on the internet. 😅
+
+What was great about this experience is that Udemy allows you to reach lots of students; unfortunately, you can't publish
+free courses longer than two hours.
+
+**Tools**: Ubuntu, Pycharm, Kdenlive, Audacity, OBS Studio, Davinci Resolve, GIMP, Affinity Photo 2
+
+![Minutes Taught](/hugo-content/2023-11/course_minutes_taught.png)
