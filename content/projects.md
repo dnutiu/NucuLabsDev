@@ -289,7 +289,7 @@ Other and miscellaneous projects 🐈‍⬛.
 
 ---
 
-### FastAPI Udemy Course
+### FastAPI Course
 
 **When**: Nov 2022
 
