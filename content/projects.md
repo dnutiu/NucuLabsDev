@@ -301,7 +301,6 @@ It's a hands-on course that teaches you how to build a REST API.
 It generated 1K$ revenue over a period of 6 months.
 Then I took the course down due to not having enough time to keep up with the framework updates
 as I was the sole person developing the course and editing the videos. 
-Financially (compared to my full time Software Engineering job), it wouldn't make much sense either.
 
 Regarding a few negative reviews, what I learned is to develop a hard skin, ignore them, and persist with your idea 😄.
 You can't please everybody when you post content on the internet. 😅
