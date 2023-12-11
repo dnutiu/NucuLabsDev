@@ -10,7 +10,7 @@ id: 1697
 image: /wp-content/uploads/2021/09/pexels-photo-1382393.jpeg
 layout: post
 permalink: /2021/09/22/fzf-a-command-line-fuzzy-finder/
-title: "fzf &#8211; A command-line fuzzy finder \U0001F338"
+title: "fzf: A command-line fuzzy finder \U0001F338"
 ---
 Hi 👋,
 
