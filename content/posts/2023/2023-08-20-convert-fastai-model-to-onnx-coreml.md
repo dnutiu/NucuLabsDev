@@ -15,6 +15,8 @@ tags:
 layout: post
 ---
 
+![coreml convert](/hugo-content/2023-07/coreml-convert.png)
+
 Hello there 👋,
 
 In this post, I will show you how to convert a FastAI model to ONNX and CoreML.
