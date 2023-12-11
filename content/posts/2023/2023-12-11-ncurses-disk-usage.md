@@ -14,6 +14,8 @@ tags:
 layout: post
 ---
 
+![ncdu](/hugo-content/2023-12/ncdu-article-image.png)
+
 Hello everyone! 👋 
 
 This is a short article about a handy tool called [ncdu](https://dev.yorhel.nl/ncdu).
