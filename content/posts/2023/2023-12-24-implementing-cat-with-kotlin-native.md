@@ -6,6 +6,7 @@ categories:
   - "Programming"
   - "Kotlin"
 permalink: /2023/12/24/implementing-cat-with-kotlin-native
+image: /hugo-content/2023-12/k-cat-cover.png
 tags:
   - kotlin
   - macOs
@@ -15,6 +16,8 @@ tags:
   - tools
 layout: post
 ---
+
+![article cover image](/hugo-content/2023-12/k-cat-cover.png)
 
 # Introduction
 
@@ -32,6 +35,8 @@ the contents of the file into the terminal. It also has more options like: `usag
 are documented in the [manual pages](https://linux.die.net/man/1/cat).
 
 # Kotlin & Kotlin Native
+
+![article kotlin image](/hugo-content/2023-12/k-cat-kotlin.png)
 
 Kotlin is a **modern** programming language that was first introduced by JetBrains in 2011 and later officially
 supported by Google for Android development. It's designed to be fully interoperable with Java, while also 
