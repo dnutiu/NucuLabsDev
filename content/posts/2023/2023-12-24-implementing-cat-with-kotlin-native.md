@@ -224,18 +224,21 @@ import okio.use
 import okio.buffer
 
 fun main(args: Array<String>) {
-    var numbering = false;
-    if (args.filterNot { it.startsWith("-") }.size != 1) {
+    // Grab the required file path argument
+    val fileArgs = args.filterNot { it.startsWith("-") }
+    if (fileArgs.size != 1) {
         println("Usage: missing path to file: ./k-cat <file>")
         return
     }
+    val filePath = fileArgs.first()
+    // Parse for optional `-n` argument
+    var numbering = false;
     args.forEach {
         when (it) {
             "-n" -> numbering = true
             "--numbering" -> numbering = true
         }
     }
-    val filePath = args[0]
 
     FileSystem.SYSTEM.source(filePath.toPath()).use { fileSource ->
         fileSource.buffer().use { bufferedFileSource ->
