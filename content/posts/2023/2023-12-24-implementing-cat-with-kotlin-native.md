@@ -1,5 +1,5 @@
 ---
-title: "Implementing cat with Kotlin Native: k-cat"
+title: "Implementing cat with Kotlin Native"
 author: [ "Denis Nutiu" ]
 date: '2023-12-24'
 categories:
