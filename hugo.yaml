@@ -84,6 +84,8 @@ params:
       url: "https://linkedin.com/in/denisnutiu"
     - name: exercism
       url: "https://exercism.org/profiles/dnutiu"
+    - name: paypal
+      url: "https://www.paypal.com/donate/?hosted_button_id=UCHP5B34MUBXY"
     - name: rss
       url: "/index.xml"
 
