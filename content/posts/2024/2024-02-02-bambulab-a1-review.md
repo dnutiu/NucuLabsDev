@@ -80,10 +80,10 @@ If you plan on buying a 3D printer yourself, you can find lots of **free** model
 - [https://www.printables.com/](https://www.printables.com/)
 - [https://makerworld.com/en](https://makerworld.com/en)
 
-To model objects I've started, using a program called [Fusion 360](https://www.autodesk.com/products/fusion-360) and
+To model objects I've started, using a free for personal use program called [Fusion 360](https://www.autodesk.com/products/fusion-360) and
 I did not like the fact that it requires an active internet connection to use since all computations are done in the cloud.
-Another reason I do not like this program is the cost. There is a free limited edition for personal use (for 3 years?),
-but it is pretty costly for a hobbyist to buy a **license** for it.
+
+It started lagging on my machine and I searched for alternatives that I can use while also being offline.
 
 Then I stumbled across [FreeCAD](https://www.freecad.org/), which is open-source and free to use! 🤯
 
