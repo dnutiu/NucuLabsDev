@@ -2,6 +2,7 @@
 author: "Denis Nu\u021Biu"
 categories:
 - Tutorial
+- Linux
 date: '2022-02-21T23:41:37+00:00'
 guid: https://nuculabs.dev/?p=2133
 id: 2133
