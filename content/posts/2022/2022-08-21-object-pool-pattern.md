@@ -9,9 +9,8 @@ id: 2271
 layout: post
 permalink: /2022/08/21/object-pool-pattern/
 tags:
-- Design Pattern
+- design patterns
 - Golang
-- object pool
 title: Object Pool Pattern
 ---
 Hi 👋
