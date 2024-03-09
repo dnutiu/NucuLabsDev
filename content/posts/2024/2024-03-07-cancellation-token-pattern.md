@@ -1,11 +1,11 @@
 ---
-title: "Cancellation Token Pattern with Python"
+title: "Cancellation Token Pattern in Python"
 author: [ "Denis Nutiu" ]
 date: '2024-03-09'
 categories:
   - Python
   - Programming
-permalink: /2024/03/09/cancellation-token-pattern-with-python
+permalink: /2024/03/09/cancellation-token-pattern-in-python
 tags:
   - python
   - programming
