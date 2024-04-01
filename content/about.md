@@ -7,7 +7,7 @@ author: "Denis Nutiu"
 
 🧑‍💻
 
-I’m Denis, a programmer living in Romania. I’m passionate about cloud computing 
+I’m Denis, a Software Engineer living in Romania. I’m passionate about cloud computing 
 and software development ✨.
 
 During my day-to-day work I am part of a small ["pizza team"](https://martinfowler.com/bliki/TwoPizzaTeam.html) and I develop and design back-end Web APIs, font-end applications in Vue.JS and CLI tools in Python or Go. I also make architecture proposals for new or existing software components.
