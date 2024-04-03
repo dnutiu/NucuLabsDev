@@ -31,7 +31,7 @@ Projects that I've done out of passion for software engineering during my free t
 
 ---
 
-### Image Tagger ([GitHub](https://github.com/dnutiu/image-tagging))
+### Image Tagger ([GitHub](https://github.com/dnutiu/ImageTagger))
 
 **When**: Jul 2023
 
@@ -51,7 +51,9 @@ I haven't published the scrapper code yet.
 
 ![Image Tagger](https://github.com/dnutiu/image-tagging/raw/master/docs/preview.png)
 
-**Tech Stack**: C#, Python, Deep Learning
+**Tech Stack**: ~~C#~~, Kotlin, Python, Deep Learning
+
+Note: **I've rewritten the application using Kotlin**, and updated the Github link.
 
 ---
 
