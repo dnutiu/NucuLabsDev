@@ -6,7 +6,7 @@ categories:
   - "Golang"
   - "Data Structures & Algorithms"
 permalink: /2024/09/15/the-hash-set
-image: /hugo-content/2024-09/the-linked-list.jpg
+image: /hugo-content/2024-09/the-hash-set.png
 tags:
   - set
   - hash set
