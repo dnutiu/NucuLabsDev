@@ -165,3 +165,5 @@ The generic parameters are specified in the form `[T Hasher[H], H MyHash]` where
 H is a concrete type of MyHash. Hasher cannot be initialized without a concrete type.
 
 When initializing the hash set you will need to specify the `String` 
+
+You can browse the [full implementation](https://github.com/dnutiu/dsa-go/tree/master/hash_set) on my GitHub.
