@@ -2,4 +2,4 @@
 
 ---
 
-This is the source code for my personal blog [blog.nuculabs.dev](https://blog.nuculabs.dev).
+This is the source code for my personal blog. [blog.nuculabs.dev](https://blog.nuculabs.dev).
