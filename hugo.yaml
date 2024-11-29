@@ -74,6 +74,8 @@ params:
     Content: A blog about Programming, Cloud and Engineering! 👨‍🔬; (Blogging consistently since 2018)
 
   socialIcons:
+    - name: x
+      url: "https://x.com/NucuLabs"
     - name: goodreads
       url: "https://www.goodreads.com/user/show/83926681-denis-nu-iu"
     - name: stackoverflow
