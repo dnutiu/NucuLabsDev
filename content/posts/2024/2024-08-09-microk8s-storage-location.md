@@ -14,7 +14,6 @@ tags:
   - hostpath
   - how to change path
 layout: post
-published: true
 ---
 
 Hello everyone,

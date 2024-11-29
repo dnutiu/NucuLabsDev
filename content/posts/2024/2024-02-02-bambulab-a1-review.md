@@ -15,7 +15,6 @@ tags:
   - cad
   - engineering
 layout: post
-published: true
 ---
 
 ![article cover image](/hugo-content/2024-02/nuculabs-dev-box.JPG)

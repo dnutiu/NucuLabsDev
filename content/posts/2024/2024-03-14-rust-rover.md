@@ -11,7 +11,6 @@ tags:
   - programming
   - embedded
 layout: post
-published: false
 ---
 
 https://github.com/dnutiu/bme680-rust

@@ -14,7 +14,6 @@ tags:
   - algorithms
   - golang
 layout: post
-published: true
 ---
 
 # Introduction

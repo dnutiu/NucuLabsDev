@@ -13,7 +13,6 @@ tags:
   - fedora
   - ubuntu
 layout: post
-published: true
 ---
 
 Hello everyone! 👋

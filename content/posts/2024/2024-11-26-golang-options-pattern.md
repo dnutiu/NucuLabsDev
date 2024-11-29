@@ -11,7 +11,6 @@ tags:
   - programming
   - golang
 layout: post
-published: true
 ---
 
 # Introduction

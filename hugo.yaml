@@ -153,6 +153,8 @@ menu:
       weight: 80
 # Read: https://github.com/adityatelange/hugo-PaperMod/wiki/FAQs#using-hugos-syntax-highlighter-chroma
 pygmentsUseClasses: true
+ignoreLogs:
+  - 'warning-goldmark-raw-html'
 markup:
   highlight:
     noClasses: false
