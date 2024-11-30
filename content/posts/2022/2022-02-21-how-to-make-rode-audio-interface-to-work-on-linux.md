@@ -62,6 +62,8 @@ alternate-sample-rate = 48000
 
 3\. Connect back the device 🔌, it should work without problems.
 
+## PipeWire
+
 Note, if you are using pipewire, you will need to run this command to set the sample rate:
 
 ```
