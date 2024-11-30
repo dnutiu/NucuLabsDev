@@ -65,8 +65,13 @@ alternate-sample-rate = 48000
 Note, if you are using pipewire, you will need to run this command to set the sample rate:
 
 ```
+pw-metadata -n settings 0 audio.access MMAP_INTERLEAVED
+pw-metadata -n settings 0 audio.channels 1
+pw-metadata -n settings 0 audio.subformat STD
 pw-metadata -n settings 0 audio.format S24_3LE
 pw-metadata -n settings 0 clock.force-rate 48000
+pw-metadata -n settings 0 audio.period-size 512
+pw-metadata -n settings 0 audio.buffer-size 32768
 ```
 
 And restart with:
