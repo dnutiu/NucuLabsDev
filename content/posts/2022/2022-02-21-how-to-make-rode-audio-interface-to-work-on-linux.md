@@ -62,5 +62,11 @@ alternate-sample-rate = 48000
 
 3\. Connect back the device 🔌, it should work without problems.
 
+Note, if you are using pipewire, you will need to run this command to set the sample rate:
+
+```
+pw-metadata -n settings 0 clock.force-rate 48000
+```
+
 
 Thanks for reading and happy hacking! 🥷
