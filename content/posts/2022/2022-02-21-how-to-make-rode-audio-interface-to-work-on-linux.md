@@ -65,8 +65,15 @@ alternate-sample-rate = 48000
 Note, if you are using pipewire, you will need to run this command to set the sample rate:
 
 ```
+pw-metadata -n settings 0 audio.format S24_3LE
 pw-metadata -n settings 0 clock.force-rate 48000
 ```
 
+And restart with:
+
+```
+systemctl --user restart pipewire.service
+systemctl --user restart pipewire-pulse.service
+```
 
 Thanks for reading and happy hacking! 🥷
