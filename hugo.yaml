@@ -76,8 +76,8 @@ params:
   socialIcons:
     - name: x
       url: "https://x.com/NucuLabs"
-    - name: mastodon
-      url: "https://mastodon.social/@nuculabs"
+    - name: bluesky
+      url: "https://bsky.app/profile/nuculabs.dev"
     - name: goodreads
       url: "https://www.goodreads.com/user/show/83926681-denis-nu-iu"
     - name: stackoverflow
