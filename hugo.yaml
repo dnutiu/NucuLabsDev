@@ -74,8 +74,8 @@ params:
     Content: A blog about Programming, Cloud and Engineering! 👨‍🔬; (Blogging consistently since 2018)
 
   socialIcons:
-    - name: x
-      url: "https://x.com/NucuLabs"
+    - name: mastodon
+      url: "https://mastodon.social/@nuculabs"
     - name: bluesky
       url: "https://bsky.app/profile/nuculabs.dev"
     - name: goodreads
