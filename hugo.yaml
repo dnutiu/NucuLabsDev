@@ -157,12 +157,12 @@ ignoreLogs:
   - 'warning-goldmark-raw-html'
 markup:
   highlight:
-    noClasses: false
-    # anchorLineNos: true
-    # codeFences: true
-    # guessSyntax: true
-    # lineNos: true
-    # style: monokai
+    noClasses: true
+    lineNos: true
+    guessSyntax: true
+  goldmark:
+    renderer:
+      unsafe: true
 outputs:
   home:
     - HTML
