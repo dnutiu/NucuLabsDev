@@ -74,8 +74,6 @@ params:
     Content: A blog about Programming, Cloud and Engineering! 👨‍🔬; (Blogging consistently since 2018)
 
   socialIcons:
-    - name: x
-      url: "https://x.com/NucuLabs"
     - name: mastodon
       url: "https://mastodon.social/@nuculabs"
     - name: bluesky
@@ -88,8 +86,8 @@ params:
       url: "https://github.com/dnutiu"
     - name: linkedin
       url: "https://linkedin.com/in/denisnutiu"
-    - name: exercism
-      url: "https://exercism.org/profiles/dnutiu"
+    - name: unsplash
+      url: "https://unsplash.com/@ndcphoto"
 
 #  analytics:
 #    google:
